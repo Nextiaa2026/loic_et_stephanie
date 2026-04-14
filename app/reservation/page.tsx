@@ -18,15 +18,15 @@ export default function ReservationPage() {
         <SiteHeader serifClassName={playfair.className} />
         <main>
           {/* Hero image */}
-          <div className="my-8 overflow-hidden rounded-2xl">
-            <div className="relative h-64 w-full sm:h-80">
+          <div className="my-10 mx-auto w-full max-w-5xl overflow-hidden">
+            <div className="relative h-64 w-full sm:h-96 md:h-[28rem]">
               <Image
                 src="/ac06bcad-4e7b-4dca-8cf2-74d10bcc5018.jpeg"
                 alt="Loïc et Stéphanie"
                 fill
-                className="object-cover object-top"
+                className="object-cover object-[center_35%]"
               />
-              <div className="absolute inset-0 bg-neutral-950/40" />
+              <div className="absolute inset-0 bg-neutral-950/20" />
             </div>
           </div>
 

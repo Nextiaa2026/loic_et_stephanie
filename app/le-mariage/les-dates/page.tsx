@@ -63,15 +63,11 @@ export default function LesDatesPage() {
           </section>
 
           {/* Events */}
-          <section className="space-y-16 pb-14 sm:pb-20">
+          <section className="mx-auto max-w-2xl space-y-16 pb-14 sm:pb-20 text-center">
             {events.map((event, i) => (
-              <Card
-                key={i}
-                className="overflow-hidden rounded-2xl border-border/60 shadow-none"
-              >
-                <div className="grid md:grid-cols-2">
-                  {/* Image */}
-                  <div className="relative aspect-[4/3] md:aspect-auto">
+              <div key={i} className="flex flex-col items-center">
+                <figure className="w-full">
+                  <div className="relative mx-auto aspect-[3/4] w-full max-w-lg overflow-hidden rounded-2xl bg-muted">
                     <Image
                       src={event.image}
                       alt={event.title}
@@ -79,38 +75,37 @@ export default function LesDatesPage() {
                       className="object-cover"
                     />
                   </div>
+                </figure>
 
-                  {/* Content */}
-                  <div className="flex flex-col justify-center">
-                    <CardHeader className="px-6 pt-8 sm:px-10 sm:pt-10">
-                      <CardTitle
-                        className={`${playfair.className} text-2xl font-semibold tracking-tight sm:text-3xl`}
-                      >
-                        {event.title}
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent className="space-y-4 px-6 pb-8 sm:px-10 sm:pb-10">
-                      <div className="flex flex-col gap-2 text-sm text-muted-foreground">
-                        <p className="inline-flex items-center gap-2">
-                          <CalendarDays className="size-4 shrink-0 text-primary" />
-                          <span>{event.date}</span>
-                        </p>
-                        <p className="inline-flex items-center gap-2">
-                          <Clock className="size-4 shrink-0 text-primary" />
-                          <span>{event.time}</span>
-                        </p>
-                        <p className="inline-flex items-center gap-2">
-                          <MapPin className="size-4 shrink-0 text-primary" />
-                          <span>{event.location}</span>
-                        </p>
-                      </div>
-                      <p className="text-sm leading-relaxed text-muted-foreground sm:text-base">
-                        {event.description}
-                      </p>
-                    </CardContent>
+                {/* Content */}
+                <div className="mt-8 flex flex-col items-center">
+                  <h2
+                    className={`${playfair.className} text-3xl font-semibold tracking-tight sm:text-4xl`}
+                  >
+                    {event.title}
+                  </h2>
+                  <Separator className="mx-auto mt-4 h-px max-w-24 bg-border" />
+
+                  <div className="mt-6 flex flex-col items-center gap-2 text-sm italic text-muted-foreground sm:text-base">
+                    <p className="inline-flex items-center gap-2">
+                      <CalendarDays className="size-4 shrink-0 text-primary" aria-hidden />
+                      <span>{event.date}</span>
+                    </p>
+                    <p className="inline-flex items-center gap-2">
+                      <Clock className="size-4 shrink-0 text-primary" aria-hidden />
+                      <span>{event.time}</span>
+                    </p>
+                    <p className="inline-flex items-center gap-2">
+                      <MapPin className="size-4 shrink-0 text-primary" aria-hidden />
+                      <span>{event.location}</span>
+                    </p>
                   </div>
+                  
+                  <p className="mt-6 max-w-xl text-sm leading-relaxed text-muted-foreground sm:text-base">
+                    {event.description}
+                  </p>
                 </div>
-              </Card>
+              </div>
             ))}
           </section>
         </main>

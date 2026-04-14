@@ -52,8 +52,8 @@ export function PracticalInfo({ serifClassName }: PracticalInfoProps) {
               ici&nbsp;:
             </CardDescription>
             <Link
-              href="#faq"
-              className="inline-block text-sm font-medium text-foreground underline decoration-foreground/40 underline-offset-4 transition-colors hover:text-foreground/80"
+              href="/le-mariage/informations-pratiques"
+              className="inline-block text-sm font-medium text-primary underline decoration-primary/40 underline-offset-4 transition-colors hover:text-primary/80"
             >
               Consulter les informations pratiques
             </Link>

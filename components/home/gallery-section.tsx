@@ -92,7 +92,7 @@ export function GallerySection({ serifClassName }: GallerySectionProps) {
         Explorez Les Moments Mémorables De Notre Voyage Amoureux.
       </h2>
 
-      <div className="mt-10 grid grid-cols-2 md:grid-cols-3 auto-rows-[90px] sm:auto-rows-[120px] md:auto-rows-[150px] gap-3 sm:gap-4 grid-flow-row-dense rounded-5xl bg-red-400">
+      <div className="mt-10 grid grid-cols-2 md:grid-cols-3 auto-rows-[90px] sm:auto-rows-[120px] md:auto-rows-[150px] gap-3 sm:gap-4 grid-flow-row-dense rounded-5xl overflow-hidden">
         {galleryImages.map((img, i) => (
           <GalleryCell
             key={img.src}

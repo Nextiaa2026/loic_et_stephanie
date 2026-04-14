@@ -39,7 +39,7 @@ function AnimatedDigit({
     return <span>{value}</span>;
   }
   return (
-    <span className="relative inline-flex min-w-[0.65em] justify-center font-sans tabular-nums">
+    <span className="relative inline-flex min-w-[0.65em] justify-center tabular-nums">
       <AnimatePresence mode="popLayout" initial={false}>
         <motion.span
           key={value}
@@ -61,16 +61,23 @@ function CountdownUnit({
   value,
   reduceMotion,
   pad = true,
+  serifClassName,
 }: {
   label: string;
   value: number;
   reduceMotion: boolean | null;
   pad?: boolean;
+  serifClassName: string;
 }) {
   const str = pad ? pad2(value) : String(value);
   return (
     <div className="flex flex-col items-center gap-2">
-      <div className="font-sans text-5xl font-extralight tracking-tight text-muted-foreground sm:text-6xl md:text-7xl lg:text-8xl">
+      <div
+        className={cn(
+          serifClassName,
+          "text-5xl font-extralight tracking-tight text-muted-foreground sm:text-6xl md:text-7xl lg:text-8xl",
+        )}
+      >
         <AnimatedDigit value={str} reduceMotion={reduceMotion} />
       </div>
       <span className="text-[10px] font-medium tracking-[0.35em] text-muted-foreground/90 uppercase">
@@ -80,10 +87,13 @@ function CountdownUnit({
   );
 }
 
-function Colon() {
+function Colon({ serifClassName }: { serifClassName: string }) {
   return (
     <span
-      className="translate-y-[-0.35rem] self-start font-sans text-4xl font-extralight text-muted-foreground/60 sm:text-5xl md:text-6xl"
+      className={cn(
+        serifClassName,
+        "translate-y-[-0.35rem] self-start text-4xl font-extralight text-muted-foreground/60 sm:text-5xl md:text-6xl",
+      )}
       aria-hidden
     >
       :
@@ -102,6 +112,7 @@ export function HomeCountdown({ serifClassName }: HomeCountdownProps) {
 
   useEffect(() => {
     // Set initial value on client to avoid hydration mismatch
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setLeft(getTimeLeft(target));
     const id = window.setInterval(() => {
       setLeft(getTimeLeft(target));
@@ -129,24 +140,28 @@ export function HomeCountdown({ serifClassName }: HomeCountdownProps) {
             value={display.days}
             reduceMotion={reduce}
             pad={false}
+            serifClassName={serifClassName}
           />
-          <Colon />
+          <Colon serifClassName={serifClassName} />
           <CountdownUnit
             label="Hours"
             value={display.hours}
             reduceMotion={reduce}
+            serifClassName={serifClassName}
           />
-          <Colon />
+          <Colon serifClassName={serifClassName} />
           <CountdownUnit
             label="Minutes"
             value={display.minutes}
             reduceMotion={reduce}
+            serifClassName={serifClassName}
           />
-          <Colon />
+          <Colon serifClassName={serifClassName} />
           <CountdownUnit
             label="Seconds"
             value={display.seconds}
             reduceMotion={reduce}
+            serifClassName={serifClassName}
           />
         </div>
       </div>

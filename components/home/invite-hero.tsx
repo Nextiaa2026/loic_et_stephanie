@@ -13,7 +13,7 @@ export function InviteHero({ serifClassName }: InviteHeroProps) {
 
   return (
     <section
-      className="relative isolate mt-8 overflow-hidden text-white"
+      className="relative isolate mt-8 overflow-hidden text-white [clip-path:polygon(0_4vw,_100%_0,_100%_100%,_0_100%)] sm:[clip-path:polygon(0_3vw,_100%_0,_100%_100%,_0_100%)]"
       style={{ minHeight: "340px" }}
     >
       <Image
