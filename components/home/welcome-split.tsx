@@ -27,7 +27,7 @@ export function WelcomeSplit({ serifClassName }: WelcomeSplitProps) {
   return (
     <section
       id="histoire"
-      className="grid w-full gap-10 py-14 sm:grid-cols-2 sm:gap-16 sm:py-20"
+      className="grid w-full gap-8 py-12 sm:grid-cols-2 sm:gap-16 sm:py-20"
     >
       <div>
         <motion.p
@@ -39,16 +39,16 @@ export function WelcomeSplit({ serifClassName }: WelcomeSplitProps) {
         <motion.h2
           className={cn(
             serifClassName,
-            "text-balance text-[1.75rem] leading-[1.12] font-semibold tracking-tight text-foreground sm:text-4xl lg:text-[2.5rem] lg:leading-[1.08]",
+            "text-balance text-[1.95rem] leading-[1.07] font-semibold tracking-tight text-foreground sm:text-4xl lg:text-[2.5rem] lg:leading-[1.08]",
           )}
           {...item(0.04)}
         >
           Découvrez Ici Les Étapes De Notre Aventure
         </motion.h2>
       </div>
-      <div className="flex flex-col gap-5 pt-1">
+      <div className="flex flex-col gap-4 pt-0.5 sm:gap-5 sm:pt-1">
         <motion.p
-          className="text-[15px] leading-[1.75] text-muted-foreground sm:text-base"
+          className="text-[15px] leading-[1.7] text-muted-foreground sm:text-base sm:leading-[1.75]"
           {...item(0.06)}
         >
           Bienvenue dans notre univers ! Nous sommes ravis de partager avec vous
@@ -57,7 +57,7 @@ export function WelcomeSplit({ serifClassName }: WelcomeSplitProps) {
           cette nouvelle vie à deux.
         </motion.p>
         <motion.p
-          className="text-[15px] leading-[1.75] text-muted-foreground sm:text-base"
+          className="text-[15px] leading-[1.7] text-muted-foreground sm:text-base sm:leading-[1.75]"
           {...item(0.12)}
         >
           Chaque étape de notre parcours a été rendue encore plus belle grâce au
@@ -66,7 +66,7 @@ export function WelcomeSplit({ serifClassName }: WelcomeSplitProps) {
           engagement.
         </motion.p>
         <motion.p
-          className="text-[15px] leading-[1.75] text-muted-foreground sm:text-base"
+          className="text-[15px] leading-[1.7] text-muted-foreground sm:text-base sm:leading-[1.75]"
           {...item(0.18)}
         >
           Préparez-vous à vivre avec nous un mariage inoubliable, où tradition,

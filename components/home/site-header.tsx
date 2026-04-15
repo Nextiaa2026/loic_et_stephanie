@@ -50,7 +50,7 @@ export function SiteHeader({ serifClassName }: SiteHeaderProps) {
       animate={reduce ? undefined : { opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
     >
-      <div className="relative flex h-18 w-full items-center justify-between px-4 sm:px-6 lg:px-10">
+      <div className="relative flex h-18 w-full items-center justify-between px-0 sm:px-2 lg:px-6">
         {/* Logo */}
         <Link
           href="/"
@@ -64,8 +64,13 @@ export function SiteHeader({ serifClassName }: SiteHeaderProps) {
             className="h-10 w-10 sm:h-11 sm:w-11"
             priority
           />
-          <span className={cn(serifClassName, "hidden text-base font-medium tracking-tight text-muted-foreground sm:inline")}>
-            Loïc & Stéphanie
+          <span
+            className={cn(
+              serifClassName,
+              "line-clamp-1 max-w-46 text-[1.75rem] leading-none font-semibold tracking-tight text-foreground sm:max-w-none sm:text-base sm:font-medium sm:text-muted-foreground",
+            )}
+          >
+            Joel Et Joanna
           </span>
         </Link>
 
@@ -122,10 +127,11 @@ export function SiteHeader({ serifClassName }: SiteHeaderProps) {
         {/* Mobile menu button */}
         <div className="flex md:hidden">
           <Button
-            variant="ghost"
+            variant="outline"
             size="icon"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Menu"
+            className="h-12 w-12 rounded-none border-primary/60 text-primary hover:bg-primary/10 hover:text-primary"
           >
             {mobileOpen ? <X className="size-5" /> : <Menu className="size-5" />}
           </Button>
@@ -135,7 +141,7 @@ export function SiteHeader({ serifClassName }: SiteHeaderProps) {
       {/* Mobile Navigation */}
       {mobileOpen && (
         <motion.nav
-          className="flex flex-col gap-1 pb-4 pt-3 md:hidden"
+          className="flex flex-col border-t border-border/70 bg-background pb-4 pt-3 md:hidden"
           initial={{ opacity: 0, y: -8 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.25 }}
@@ -143,18 +149,28 @@ export function SiteHeader({ serifClassName }: SiteHeaderProps) {
           <Link
             href="/"
             onClick={() => setMobileOpen(false)}
-            className="rounded-md px-3 py-2.5 text-sm font-medium text-foreground transition-colors hover:bg-muted"
+            className={cn(
+              "px-3 py-3 text-[1.9rem] tracking-tight transition-colors",
+              serifClassName,
+              pathname === "/" ? "text-primary" : "text-foreground hover:bg-muted/50",
+            )}
           >
             Accueil
           </Link>
           <Link
             href="/notre-histoire"
             onClick={() => setMobileOpen(false)}
-            className="rounded-md px-3 py-2.5 text-sm font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+            className={cn(
+              "border-t border-border/60 px-3 py-3 text-[1.9rem] tracking-tight transition-colors",
+              serifClassName,
+              pathname === "/notre-histoire"
+                ? "text-primary"
+                : "text-foreground hover:bg-muted/50",
+            )}
           >
             Notre Histoire
           </Link>
-          <div className="px-3 pt-2 pb-1">
+          <div className="border-t border-border/60 px-3 pt-3 pb-2">
             <p className="text-xs font-semibold uppercase tracking-wider text-primary">
               Le Mariage
             </p>
@@ -164,7 +180,12 @@ export function SiteHeader({ serifClassName }: SiteHeaderProps) {
               key={item.href}
               href={item.href}
               onClick={() => setMobileOpen(false)}
-              className="rounded-md px-5 py-2 text-sm text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+              className={cn(
+                "px-5 py-2.5 text-base transition-colors",
+                pathname === item.href
+                  ? "text-primary"
+                  : "text-muted-foreground hover:bg-muted hover:text-foreground",
+              )}
             >
               {item.label}
             </Link>

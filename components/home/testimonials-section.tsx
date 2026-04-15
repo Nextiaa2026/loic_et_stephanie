@@ -47,10 +47,13 @@ export function TestimonialsSection({
 
   return (
     <section className="w-full py-14 sm:py-20">
+      <p className="text-center text-[11px] font-medium tracking-[0.4em] text-muted-foreground uppercase">
+        Témoignages
+      </p>
       <h2
         className={cn(
           serifClassName,
-          "mx-auto mb-10 max-w-3xl text-center text-[1.65rem] leading-tight font-semibold tracking-tight text-foreground sm:text-4xl"
+          "mx-auto mt-4 mb-10 max-w-3xl text-center text-[1.95rem] leading-[1.08] font-semibold tracking-tight text-foreground sm:text-4xl"
         )}
       >
         Ce que nos amis disent de nous

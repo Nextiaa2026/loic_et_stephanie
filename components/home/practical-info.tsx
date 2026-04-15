@@ -10,7 +10,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card"
-import { Skeleton } from "@/components/ui/skeleton"
 import { cn } from "@/lib/utils"
 
 type PracticalInfoProps = {
@@ -22,12 +21,6 @@ export function PracticalInfo({ serifClassName }: PracticalInfoProps) {
 
   return (
     <section id="informations" className="w-full pb-14 sm:pb-20">
-      <div className="mb-6 flex gap-3 sm:mb-8" aria-hidden>
-        {[0, 1, 2, 3].map((i) => (
-          <Skeleton key={i} className="h-16 flex-1 rounded-xl sm:h-20" />
-        ))}
-      </div>
-
       <motion.div
         initial={reduce ? false : { opacity: 0, y: 24 }}
         whileInView={reduce ? undefined : { opacity: 1, y: 0 }}
@@ -39,23 +32,23 @@ export function PracticalInfo({ serifClassName }: PracticalInfoProps) {
             <CardTitle
               className={cn(
                 serifClassName,
-                "font-heading text-2xl font-semibold tracking-tight text-foreground sm:text-3xl"
+                "font-heading text-[2rem] leading-[1.1] font-semibold tracking-tight text-foreground sm:text-3xl"
               )}
             >
               Informations pratiques
             </CardTitle>
           </CardHeader>
           <CardContent className="space-y-5 px-6 pb-8 sm:px-12 sm:pb-10">
-            <CardDescription className="text-left text-base leading-relaxed sm:text-[15px]">
+            <CardDescription className="text-left text-[1.12rem] leading-[1.65] sm:text-[15px] sm:leading-relaxed">
               Tous les détails concernant les lieux, le transport, les tenues, le
               programme ou encore les confirmations de présence sont disponibles
               ici&nbsp;:
             </CardDescription>
             <Link
               href="/le-mariage/informations-pratiques"
-              className="inline-block text-sm font-medium text-primary underline decoration-primary/40 underline-offset-4 transition-colors hover:text-primary/80"
+              className="inline-block text-[1.08rem] font-medium text-primary underline decoration-primary/40 underline-offset-4 transition-colors hover:text-primary/80 sm:text-sm"
             >
-              Consulter les informations pratiques
+              👉 Consulter les informations pratiques
             </Link>
           </CardContent>
         </Card>
