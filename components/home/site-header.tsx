@@ -70,14 +70,14 @@ export function SiteHeader({ serifClassName }: SiteHeaderProps) {
               "line-clamp-1 max-w-46 text-[1.75rem] leading-none font-semibold tracking-tight text-foreground sm:max-w-none sm:text-base sm:font-medium sm:text-muted-foreground",
             )}
           >
-            Joel Et Joanna
+            Loïc & Stéphanie
           </span>
         </Link>
 
         {/* Desktop Navigation perfectly centered */}
         <div className="pointer-events-none absolute inset-0 hidden items-center justify-center md:flex">
           <NavigationMenu className="pointer-events-auto max-w-none">
-             <NavigationMenuList className="flex-wrap justify-center gap-1 sm:gap-3 md:gap-5">
+            <NavigationMenuList className="flex-wrap justify-center gap-1 sm:gap-3 md:gap-5">
               <NavigationMenuItem>
                 <NavigationMenuLink
                   href="/"
@@ -111,7 +111,9 @@ export function SiteHeader({ serifClassName }: SiteHeaderProps) {
                         href={item.href}
                         className={cn(
                           "rounded-md px-3 py-2.5 text-sm transition-colors hover:bg-muted hover:text-foreground",
-                          pathname === item.href ? "text-primary bg-muted/50" : "text-muted-foreground"
+                          pathname === item.href
+                            ? "text-primary bg-muted/50"
+                            : "text-muted-foreground",
                         )}
                       >
                         {item.label}
@@ -133,7 +135,11 @@ export function SiteHeader({ serifClassName }: SiteHeaderProps) {
             aria-label="Menu"
             className="h-12 w-12 rounded-none border-primary/60 text-primary hover:bg-primary/10 hover:text-primary"
           >
-            {mobileOpen ? <X className="size-5" /> : <Menu className="size-5" />}
+            {mobileOpen ? (
+              <X className="size-5" />
+            ) : (
+              <Menu className="size-5" />
+            )}
           </Button>
         </div>
       </div>
@@ -152,7 +158,9 @@ export function SiteHeader({ serifClassName }: SiteHeaderProps) {
             className={cn(
               "px-3 py-3 text-[1.9rem] tracking-tight transition-colors",
               serifClassName,
-              pathname === "/" ? "text-primary" : "text-foreground hover:bg-muted/50",
+              pathname === "/"
+                ? "text-primary"
+                : "text-foreground hover:bg-muted/50",
             )}
           >
             Accueil
