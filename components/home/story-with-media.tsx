@@ -60,7 +60,7 @@ export function StoryWithMedia({ serifClassName }: StoryWithMediaProps) {
         <div className="overflow-hidden rounded-2xl bg-muted">
           <AspectRatio ratio={4 / 3} className="bg-muted md:aspect-16/7">
             <Image
-              src="/6b069496-a6e3-477d-b886-2c1f901cf087.jpeg"
+              src="/jl_2026_11.jpeg"
               alt="Notre histoire"
               fill
               className="object-cover"

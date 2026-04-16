@@ -19,7 +19,7 @@ export function EventReligious({ serifClassName }: EventReligiousProps) {
             className="overflow-hidden rounded-2xl bg-muted"
           >
             <Image
-              src="/4097433a-e1cd-4404-b530-2303186ea48b.jpeg"
+              src="/jl_2026_02.jpeg"
               alt="Mariage religieux"
               fill
               className="object-cover"
@@ -43,10 +43,15 @@ export function EventReligious({ serifClassName }: EventReligiousProps) {
             <CalendarDays className="size-3.5 shrink-0" aria-hidden />
             <span>Samedi 02 août 2026</span>
           </p>
-          <p className="inline-flex items-center gap-2">
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=Cathedrale+Poste+Central+Yaounde"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 underline decoration-primary/40 underline-offset-4 transition-colors hover:text-foreground"
+          >
             <MapPin className="size-3.5 shrink-0" aria-hidden />
             <span>Cathédrale Poste Central</span>
-          </p>
+          </a>
         </div>
         <div className="mx-auto mt-6 max-w-xl space-y-1 text-sm leading-relaxed text-muted-foreground sm:text-base">
           <p>Une promesse sacrée devant Dieu et nos proches.</p>

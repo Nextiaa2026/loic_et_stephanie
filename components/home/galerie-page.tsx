@@ -3,7 +3,9 @@
 import Image from "next/image";
 import { useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
+import { X } from "lucide-react";
 import { GalleryLightbox } from "@/components/home/gallery-lightbox";
+import { PageHeroVertical } from "@/components/home/page-hero-vertical";
 import { cn } from "@/lib/utils";
 import { SiteHeader } from "./site-header";
 import { SiteFooter } from "./site-footer";
@@ -11,27 +13,51 @@ import { PageContainer } from "./page-container";
 
 const galleryImages = [
   {
-    src: "/ac06bcad-4e7b-4dca-8cf2-74d10bcc5018.jpeg",
+    src: "/jl_2026_main_hero.jpeg",
     alt: "Loïc et Stéphanie",
   },
   {
-    src: "/b3f09d60-25ab-485e-9c5f-fe014f520ddb.jpeg",
+    src: "/jl_2026_01.jpeg",
     alt: "Loïc et Stéphanie",
   },
   {
-    src: "/d76a6df3-2ca2-4291-a0a9-4203ea8d392f.jpeg",
+    src: "/jl_2026_02.jpeg",
     alt: "Loïc et Stéphanie",
   },
   {
-    src: "/1069335d-befc-4cff-bff6-66d308050085.jpeg",
+    src: "/jl_2026_03.jpeg",
     alt: "Loïc et Stéphanie",
   },
   {
-    src: "/4097433a-e1cd-4404-b530-2303186ea48b.jpeg",
+    src: "/jl_2026_04.jpeg",
     alt: "Loïc et Stéphanie",
   },
   {
-    src: "/6b069496-a6e3-477d-b886-2c1f901cf087.jpeg",
+    src: "/jl_2026_05.jpeg",
+    alt: "Loïc et Stéphanie",
+  },
+  {
+    src: "/jl_2026_06.jpeg",
+    alt: "Loïc et Stéphanie",
+  },
+  {
+    src: "/jl_2026_08.jpeg",
+    alt: "Loïc et Stéphanie",
+  },
+  {
+    src: "/jl_2026_07.jpeg",
+    alt: "Loïc et Stéphanie",
+  },
+  {
+    src: "/jl_2026_09.jpeg",
+    alt: "Loïc et Stéphanie",
+  },
+  {
+    src: "/jl_2026_10.jpeg",
+    alt: "Loïc et Stéphanie",
+  },
+  {
+    src: "/jl_2026_11.jpeg",
     alt: "Loïc et Stéphanie",
   },
 ];
@@ -42,6 +68,7 @@ export function GaleriePage({ serifClassName }: GaleriePageProps) {
   const reduce = useReducedMotion();
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState(0);
+  const [videoOpen, setVideoOpen] = useState(false);
 
   const lightboxItems = galleryImages.map(({ src, alt }) => ({ src, alt }));
 
@@ -56,31 +83,38 @@ export function GaleriePage({ serifClassName }: GaleriePageProps) {
         />
         <SiteHeader serifClassName={serifClassName} />
         <main className="py-14 sm:py-20">
-          {/* Video hero */}
-          <div className="mb-10 overflow-hidden rounded-2xl bg-muted">
-            <video
-              src="/c6836ad9-fad1-4136-b6fd-bce877ac155e.mov"
-              autoPlay
-              muted
-              loop
-              playsInline
-              className="w-full object-cover max-h-[480px]"
-            />
+          <PageHeroVertical
+            title="Notre Galerie"
+            description="Explorez les moments mémorables de notre voyage."
+            imageSrc="/jl_2026_06.jpeg"
+            serifClassName={serifClassName}
+          />
+
+          <div className="mx-auto mt-10 max-w-xl">
+            <button
+              type="button"
+              onClick={() => setVideoOpen(true)}
+              className="group relative block w-full cursor-pointer overflow-hidden rounded-2xl bg-muted text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+              aria-label="Ouvrir la vidéo en grand format"
+            >
+              <video
+                src="/c6836ad9-fad1-4136-b6fd-bce877ac155e.mov"
+                muted
+                loop
+                playsInline
+                autoPlay
+                className="h-56 w-full object-cover sm:h-64"
+              />
+              <div className="absolute inset-0 bg-black/25 transition-colors group-hover:bg-black/15" />
+              <div className="absolute inset-0 flex items-center justify-center">
+                <span className="rounded-full bg-white/90 px-4 py-2 text-xs font-semibold tracking-wider text-foreground uppercase">
+                  Voir la vidéo
+                </span>
+              </div>
+            </button>
           </div>
 
-          <p className="text-center text-[11px] font-medium tracking-[0.4em] text-muted-foreground uppercase">
-            Notre galerie
-          </p>
-          <h2
-            className={cn(
-              serifClassName,
-              "mx-auto mt-4 max-w-3xl text-center text-[1.65rem] leading-[1.15] font-semibold tracking-tight text-foreground sm:text-4xl",
-            )}
-          >
-            Explorez les moments mémorables de notre voyage
-          </h2>
-
-          <div className="mt-10 grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3">
+          <div className="mt-10 grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4 md:grid-cols-3">
             {galleryImages.map((img, i) => (
               <motion.button
                 key={img.src}
@@ -105,6 +139,7 @@ export function GaleriePage({ serifClassName }: GaleriePageProps) {
                   src={img.src}
                   alt=""
                   fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 33vw"
                   className="object-cover transition duration-300 group-hover:brightness-[1.03]"
                 />
                 <span className="sr-only">{img.alt}</span>
@@ -114,6 +149,39 @@ export function GaleriePage({ serifClassName }: GaleriePageProps) {
         </main>
         <SiteFooter />
       </PageContainer>
+
+      {videoOpen ? (
+        <div
+          className="fixed inset-0 z-100 flex items-center justify-center bg-black/90 p-3 sm:p-6"
+          role="dialog"
+          aria-modal="true"
+          aria-label="Lecture vidéo"
+        >
+          <button
+            type="button"
+            className="absolute inset-0"
+            aria-label="Fermer la vidéo"
+            onClick={() => setVideoOpen(false)}
+          />
+          <div className="relative z-10 w-full max-w-5xl">
+            <button
+              type="button"
+              onClick={() => setVideoOpen(false)}
+              className="absolute -top-12 right-0 inline-flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white hover:bg-white/20"
+              aria-label="Fermer"
+            >
+              <X className="size-5" />
+            </button>
+            <video
+              src="/c6836ad9-fad1-4136-b6fd-bce877ac155e.mov"
+              controls
+              autoPlay
+              playsInline
+              className="max-h-[85vh] w-full rounded-xl bg-black object-contain"
+            />
+          </div>
+        </div>
+      ) : null}
     </div>
   );
 }

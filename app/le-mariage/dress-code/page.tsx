@@ -1,9 +1,9 @@
 import { Playfair_Display } from "next/font/google";
 import { Check, X } from "lucide-react";
 import { PageContainer } from "@/components/home/page-container";
+import { PageHeroVertical } from "@/components/home/page-hero-vertical";
 import { SiteHeader } from "@/components/home/site-header";
 import { SiteFooter } from "@/components/home/site-footer";
-import { Separator } from "@/components/ui/separator";
 import {
   Card,
   CardContent,
@@ -17,6 +17,8 @@ const playfair = Playfair_Display({
   display: "swap",
   weight: ["400", "500", "600", "700"],
 });
+
+const PINTEREST_DRESS_CODE_URL = "https://pin.it/fE30hrBiY";
 
 const dressCodes = [
   {
@@ -60,21 +62,27 @@ export default function DressCodePage() {
       <PageContainer>
         <SiteHeader serifClassName={playfair.className} />
         <main>
-          {/* Hero */}
-          <section className="py-14 text-center sm:py-20">
-            <p className="text-[11px] font-medium uppercase tracking-[0.4em] text-muted-foreground">
-              Le Mariage
+          <PageHeroVertical
+            title="Dress Code"
+            description="Chaque cérémonie a son ambiance. Voici les tenues recommandées pour chacun de nos événements."
+            imageSrc="/jl_2026_02.jpeg"
+            serifClassName={playfair.className}
+          />
+
+          <section className="mx-auto mb-10 max-w-3xl rounded-2xl border border-border/60 bg-card px-6 py-6 text-center sm:px-8">
+            <p className="text-sm leading-relaxed text-muted-foreground sm:text-base">
+              Besoin d'inspiration pour vos tenues ? Consultez notre tableau
+              Pinterest dédié au dress code pour découvrir des idées de styles,
+              matières et coupes dans l'esprit de la célébration.
             </p>
-            <h1
-              className={`${playfair.className} mx-auto mt-4 max-w-2xl text-3xl font-semibold tracking-tight text-foreground sm:text-4xl lg:text-5xl`}
+            <a
+              href={PINTEREST_DRESS_CODE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 inline-flex text-sm font-medium text-primary underline decoration-primary/40 underline-offset-4 transition-colors hover:text-primary/85 sm:text-base"
             >
-              Dress Code
-            </h1>
-            <p className="mx-auto mt-4 max-w-lg text-base text-muted-foreground">
-              Chaque cérémonie a son ambiance. Voici les tenues
-              recommandées pour chacun de nos événements.
-            </p>
-            <Separator className="mx-auto mt-8 max-w-24" />
+              Voir le tableau Pinterest dress code
+            </a>
           </section>
 
           {/* Dress codes */}

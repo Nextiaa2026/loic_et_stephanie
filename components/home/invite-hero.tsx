@@ -17,7 +17,7 @@ export function InviteHero({ serifClassName }: InviteHeroProps) {
       style={{ minHeight: "320px" }}
     >
       <Image
-        src="/ac06bcad-4e7b-4dca-8cf2-74d10bcc5018.jpeg"
+        src="/jl_2026_08.jpeg"
         alt="Loïc et Stéphanie"
         fill
         className="object-cover object-center"

@@ -1,5 +1,6 @@
 import { Cormorant_Garamond } from "next/font/google";
 import { PageContainer } from "@/components/home/page-container";
+import { PageHeroVertical } from "@/components/home/page-hero-vertical";
 import { SiteHeader } from "@/components/home/site-header";
 import { SiteFooter } from "@/components/home/site-footer";
 import { FaqAccordion } from "@/components/home/faq-accordion";
@@ -15,15 +16,13 @@ export default function FaqPage() {
     <div className="min-h-screen bg-background text-foreground">
       <PageContainer>
         <SiteHeader serifClassName={playfair.className} />
-        <main className="py-14 sm:py-20">
-          <p className="text-center text-[11px] font-medium tracking-[0.4em] text-muted-foreground uppercase">
-            Questions fréquentes
-          </p>
-          <h1
-            className={`${playfair.className} mx-auto mt-4 max-w-2xl text-center text-3xl font-semibold tracking-tight text-foreground sm:text-4xl`}
-          >
-            Tout ce que vous devez savoir
-          </h1>
+        <main className="pb-14 sm:pb-20">
+          <PageHeroVertical
+            title="Questions fréquentes"
+            description="Tout ce que vous devez savoir pour préparer votre venue."
+            imageSrc="/jl_2026_01.jpeg"
+            serifClassName={playfair.className}
+          />
           <div className="mx-auto mt-12 max-w-2xl">
             <FaqAccordion />
           </div>

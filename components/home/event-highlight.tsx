@@ -19,7 +19,7 @@ export function EventHighlight({ serifClassName }: EventHighlightProps) {
             className="overflow-hidden rounded-2xl bg-muted"
           >
             <Image
-              src="/1069335d-befc-4cff-bff6-66d308050085.jpeg"
+              src="/jl_2026_09.jpeg"
               alt="Mariage traditionnel"
               fill
               className="object-cover"
@@ -43,10 +43,15 @@ export function EventHighlight({ serifClassName }: EventHighlightProps) {
             <CalendarDays className="size-3.5 shrink-0" aria-hidden />
             <span>Samedi 26 juillet 2026</span>
           </p>
-          <p className="inline-flex items-center gap-2">
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=Mfou+La+Boulangerie+du+Peuple"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 underline decoration-primary/40 underline-offset-4 transition-colors hover:text-foreground"
+          >
             <MapPin className="size-3.5 shrink-0" aria-hidden />
             <span>Mfou — La Boulangerie du Peuple</span>
-          </p>
+          </a>
         </div>
         <div className="mx-auto mt-6 max-w-xl space-y-1 text-sm leading-relaxed text-muted-foreground sm:text-base">
           <p>Un hommage vibrant à nos racines.</p>

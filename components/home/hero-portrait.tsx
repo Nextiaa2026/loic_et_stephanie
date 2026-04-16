@@ -24,7 +24,7 @@ export function HeroPortrait({ serifClassName }: HeroPortraitProps) {
       >
         <AspectRatio ratio={4 / 5} className="bg-muted md:aspect-16/7">
           <Image
-            src="/b3f09d60-25ab-485e-9c5f-fe014f520ddb.jpeg"
+            src="/jl_2026_main_hero.jpeg"
             alt="Loïc et Stéphanie"
             fill
             sizes="100vw"

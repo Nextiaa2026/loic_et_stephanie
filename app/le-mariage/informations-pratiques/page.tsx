@@ -2,9 +2,9 @@ import { Cormorant_Garamond } from "next/font/google";
 import type { LucideIcon } from "lucide-react";
 import { Car, Hotel, Landmark, MapPin, Phone, Plane } from "lucide-react";
 import { PageContainer } from "@/components/home/page-container";
+import { PageHeroVertical } from "@/components/home/page-hero-vertical";
 import { SiteHeader } from "@/components/home/site-header";
 import { SiteFooter } from "@/components/home/site-footer";
-import { Separator } from "@/components/ui/separator";
 import {
   Card,
   CardContent,
@@ -87,22 +87,12 @@ export default function InformationsPratiquesPage() {
       <PageContainer>
         <SiteHeader serifClassName={playfair.className} />
         <main>
-          {/* Hero */}
-          <section className="py-14 text-center sm:py-20">
-            <p className="text-[11px] font-medium uppercase tracking-[0.4em] text-muted-foreground">
-              Le Mariage
-            </p>
-            <h1
-              className={`${playfair.className} mx-auto mt-4 max-w-2xl text-3xl font-semibold tracking-tight text-foreground sm:text-4xl lg:text-5xl`}
-            >
-              Informations Pratiques
-            </h1>
-            <p className="mx-auto mt-4 max-w-lg text-base text-muted-foreground">
-              Tout ce que vous devez savoir pour préparer votre
-              venue et profiter pleinement de ces journées.
-            </p>
-            <Separator className="mx-auto mt-8 max-w-24" />
-          </section>
+          <PageHeroVertical
+            title="Informations Pratiques"
+            description="Tout ce que vous devez savoir pour préparer votre venue et profiter pleinement de ces journées."
+            imageSrc="/jl_2026_03.jpeg"
+            serifClassName={playfair.className}
+          />
 
           {/* Info cards grid */}
           <section className="grid gap-6 pb-14 sm:grid-cols-2 sm:pb-20 lg:grid-cols-3">

@@ -19,24 +19,17 @@ type TestimonialsSectionProps = {
 const cards = [
   {
     quote:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.",
-    primary: "Mike Fotso",
-    secondary: "The best or nothing",
+      "À première vue, tout semble vous opposer. D'un côté, Loïc, discret et réservé, presque timide. De l'autre, Stéphanie, véritable boule d'énergie, rayonnante et pleine de vie. Et pourtant... vous êtes la plus belle preuve que les contraires ne s'opposent pas, mais se complètent. Là où l'un apaise, l'autre insuffle l'élan ; là où l'un observe, l'autre illumine. Aujourd'hui, vous formez un couple harmonieux, complice et profondément uni, où chacun semble avoir trouvé en l'autre son équilibre. Nous vous souhaitons de cultiver cette belle complicité encore longtemps, et de continuer à avancer ensemble, main dans la main, avec amour, joie et bonheur.",
+    primary: "Ulrich & Dimitri",
+    secondary: null,
     primaryClass: "font-semibold text-foreground",
   },
   {
     quote:
-      "Donec ullamcorper nulla non metus auctor fringilla. Maecenas faucibus mollis interdum. Cras justo odio, dapibus ac facilisis in, egestas eget quam.",
-    primary: "Sarah & Jonathan",
+      "Depuis 2022, Stéphanie me parlait déjà de son mariage féerique. Elle avait tout prévu : la liste des invités, les prestataires... absolument tout. Enfin presque - le marié, lui, était encore inconnu 😂 Je me souviens en rire encore, me demandant comment quelqu'un pouvait organiser son mariage dans les moindres détails... alors qu'elle était célibataire. Comme si elle avait eu une révélation. Et aujourd'hui, je me dis que c'en était sûrement une... puisqu'elle t'a trouvé. Celui qui complète ce rêve, qui lui donne vie, et qui transforme ce projet en une magnifique réalité. Nous y sommes enfin : aux portes de ce mariage féerique, célébrant l'union d'une princesse et de son prince. Je suis tellement heureuse de vous voir construire cette belle histoire à deux, et de faire partie de ce moment unique. Que cette journée dépasse toutes vos attentes, et que votre vie ensemble soit remplie d'amour, de paix, de bonheur et de prospérité. Je vous aime très fort, ma princesse de Monaco... et son prince ❤️",
+    primary: "Angela",
     secondary: null,
     primaryClass: "text-muted-foreground",
-  },
-  {
-    quote:
-      "Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Integer posuere erat a ante venenatis.",
-    primary: "Eva",
-    secondary: null,
-    primaryClass: "font-bold text-foreground",
   },
 ] as const
 
@@ -58,7 +51,7 @@ export function TestimonialsSection({
       >
         Ce que nos amis disent de nous
       </h2>
-      <div className="grid grid-cols-1 gap-6 md:grid-cols-3 md:gap-7">
+      <div className="mx-auto grid max-w-5xl grid-cols-1 gap-6 md:grid-cols-2 md:gap-7">
         {cards.map((item, i) => (
           <motion.div
             key={item.primary}

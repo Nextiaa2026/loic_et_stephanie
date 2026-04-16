@@ -67,7 +67,7 @@ export function SiteHeader({ serifClassName }: SiteHeaderProps) {
           <span
             className={cn(
               serifClassName,
-              "line-clamp-1 max-w-46 text-[1.75rem] leading-none font-semibold tracking-tight text-foreground sm:max-w-none sm:text-base sm:font-medium sm:text-muted-foreground",
+              "text-[1.22rem] leading-none font-semibold tracking-tight text-foreground sm:text-base sm:font-medium sm:text-muted-foreground",
             )}
           >
             Loïc & Stéphanie

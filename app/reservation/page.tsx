@@ -1,6 +1,7 @@
 import { Cormorant_Garamond } from "next/font/google";
 import Image from "next/image";
 import { PageContainer } from "@/components/home/page-container";
+import { PageHeroVertical } from "@/components/home/page-hero-vertical";
 import { SiteHeader } from "@/components/home/site-header";
 import { SiteFooter } from "@/components/home/site-footer";
 import { RsvpForm } from "@/components/home/rsvp-form";
@@ -17,11 +18,18 @@ export default function ReservationPage() {
       <PageContainer>
         <SiteHeader serifClassName={playfair.className} />
         <main>
+          <PageHeroVertical
+            title="Réservation"
+            description="Confirmez votre présence et rejoignez-nous pour célébrer ce grand jour."
+            imageSrc="/jl_2026_05.jpeg"
+            serifClassName={playfair.className}
+          />
+
           {/* Hero image */}
           <div className="my-10 mx-auto w-full max-w-5xl overflow-hidden">
-            <div className="relative h-64 w-full sm:h-96 md:h-[28rem]">
+            <div className="relative h-64 w-full sm:h-96 md:h-112">
               <Image
-                src="/ac06bcad-4e7b-4dca-8cf2-74d10bcc5018.jpeg"
+                src="/jl_2026_06.jpeg"
                 alt="Loïc et Stéphanie"
                 fill
                 className="object-cover object-[center_35%]"
