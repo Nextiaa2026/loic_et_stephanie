@@ -77,7 +77,7 @@ export function WelcomeSplit({ serifClassName }: WelcomeSplitProps) {
           className="text-sm font-medium tracking-wide text-muted-foreground"
           {...item(0.22)}
         >
-          #LS2026
+          #SL2026 · #assoke2026
         </motion.p>
         <motion.div id="rsvp" {...item(0.26)}>
           <Button

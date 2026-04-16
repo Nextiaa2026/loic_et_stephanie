@@ -41,11 +41,11 @@ export function EventReligious({ serifClassName }: EventReligiousProps) {
         <div className="mt-6 flex flex-col items-center gap-1.5 text-sm italic text-muted-foreground sm:text-base">
           <p className="inline-flex items-center gap-2">
             <CalendarDays className="size-3.5 shrink-0" aria-hidden />
-            <span>Samedi 02 août 2026 (placeholder)</span>
+            <span>Samedi 02 août 2026</span>
           </p>
           <p className="inline-flex items-center gap-2">
             <MapPin className="size-3.5 shrink-0" aria-hidden />
-            <span>Monastère des bénédictins, Mont Febe — Yaoundé</span>
+            <span>Cathédrale Poste Central</span>
           </p>
         </div>
         <div className="mx-auto mt-6 max-w-xl space-y-1 text-sm leading-relaxed text-muted-foreground sm:text-base">

@@ -1,5 +1,6 @@
 import { Cormorant_Garamond } from "next/font/google";
-import { Car, Hotel, MapPin, Phone, Plane, Utensils } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
+import { Car, Hotel, Landmark, MapPin, Phone, Plane } from "lucide-react";
 import { PageContainer } from "@/components/home/page-container";
 import { SiteHeader } from "@/components/home/site-header";
 import { SiteFooter } from "@/components/home/site-footer";
@@ -10,6 +11,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { SITE_CONTACT_EMAIL } from "@/lib/site-config";
 
 const playfair = Cormorant_Garamond({
   subsets: ["latin"],
@@ -17,39 +19,35 @@ const playfair = Cormorant_Garamond({
   weight: ["300", "400", "500", "600", "700"],
 });
 
-const infoSections = [
+const infoSections: {
+  icon: LucideIcon;
+  title: string;
+  items: string[];
+  contactEmail?: string;
+}[] = [
   {
     icon: Plane,
     title: "Accès & Transport",
     items: [
       "L'aéroport international de Yaoundé-Nsimalen est le point d'arrivée pour les invités venant de l'étranger.",
-      "Des navettes seront organisées depuis Yaoundé vers Bana pour le mariage traditionnel.",
-      "Pour le mariage religieux, le Monastère des Bénédictins est situé sur le Mont Febe, à environ 20 minutes du centre-ville de Yaoundé.",
+      "Des navettes pourront être organisées depuis Yaoundé vers Mfou pour le mariage traditionnel — détails à confirmer.",
+      "Pour le mariage religieux, la Cathédrale Poste Central est accessible depuis le centre-ville de Yaoundé.",
     ],
   },
   {
     icon: Hotel,
     title: "Hébergement",
     items: [
-      "Hôtel Hilton Yaoundé — Tarifs négociés pour les invités (mentionnez « Mariage LS »).",
+      "Hôtel Hilton Yaoundé — Tarifs négociés pour les invités (mentionnez « SL2026 » ou « assoke2026 »).",
       "Hôtel La Falaise — Option intermédiaire, à 10 min de l'église.",
       "Résidences familiales disponibles pour certains invités — merci de nous contacter.",
-    ],
-  },
-  {
-    icon: Utensils,
-    title: "Restauration",
-    items: [
-      "Un buffet sera servi après chaque cérémonie.",
-      "Merci de nous indiquer vos restrictions alimentaires (végétarien, halal, allergies) dans le formulaire RSVP.",
-      "Cocktails et boissons inclus pour les deux réceptions.",
     ],
   },
   {
     icon: Car,
     title: "Stationnement",
     items: [
-      "Un parking est disponible sur place pour les deux cérémonies.",
+      "Un parking est disponible sur place selon les lieux — précisions communiquées avant l’événement.",
       "Des agents de sécurité seront présents pour guider les véhicules.",
       "Covoiturage encouragé — un groupe WhatsApp dédié sera créé.",
     ],
@@ -58,9 +56,18 @@ const infoSections = [
     icon: MapPin,
     title: "Lieux des cérémonies",
     items: [
-      "Mariage Traditionnel : La Vallée de Bana, Région de l'Ouest, Cameroun.",
-      "Mariage Religieux : Monastère des Bénédictins, Mont Febe, Yaoundé.",
-      "Des cartes et itinéraires détaillés seront envoyés par email avant l'événement.",
+      "Mariage traditionnel : Mfou — La Boulangerie du Peuple.",
+      "Mariage religieux : Cathédrale Poste Central.",
+      "Des cartes et itinéraires détaillés seront envoyés par email avant l’événement.",
+    ],
+  },
+  {
+    icon: Landmark,
+    title: "Mariage civil",
+    items: [
+      "Le mariage civil officialise notre union devant l’autorité de l’état civil : c’est l’acte légal qui nous reconnaît comme époux et épouse.",
+      "Lieu : Limbes.",
+      "La date et l’horaire précis vous seront communiqués dès qu’ils seront fixés. Pensez à vous munir d’une pièce d’identité valide, comme pour toute cérémonie civile.",
     ],
   },
   {
@@ -68,9 +75,9 @@ const infoSections = [
     title: "Contact",
     items: [
       "Pour toute question logistique, contactez notre coordinatrice : Marie — +237 6XX XXX XXX.",
-      "Email : contact@loicstephanie2026.com",
       "N'hésitez pas à nous solliciter, nous sommes là pour vous faciliter le séjour !",
     ],
+    contactEmail: SITE_CONTACT_EMAIL,
   },
 ];
 
@@ -116,14 +123,41 @@ export default function InformationsPratiquesPage() {
                 </CardHeader>
                 <CardContent className="px-6 pb-8 sm:px-8">
                   <ul className="space-y-3">
-                    {section.items.map((item, j) => (
-                      <li
-                        key={j}
-                        className="text-sm leading-relaxed text-muted-foreground"
-                      >
-                        {item}
-                      </li>
-                    ))}
+                    {section.contactEmail ? (
+                      <>
+                        {section.items[0] ? (
+                          <li className="text-sm leading-relaxed text-muted-foreground">
+                            {section.items[0]}
+                          </li>
+                        ) : null}
+                        <li className="text-sm leading-relaxed text-muted-foreground">
+                          Email :{" "}
+                          <a
+                            href={`mailto:${section.contactEmail}`}
+                            className="font-medium text-primary underline decoration-primary/40 underline-offset-4 transition-colors hover:text-primary/85"
+                          >
+                            {section.contactEmail}
+                          </a>
+                        </li>
+                        {section.items.slice(1).map((item, j) => (
+                          <li
+                            key={j}
+                            className="text-sm leading-relaxed text-muted-foreground"
+                          >
+                            {item}
+                          </li>
+                        ))}
+                      </>
+                    ) : (
+                      section.items.map((item, j) => (
+                        <li
+                          key={j}
+                          className="text-sm leading-relaxed text-muted-foreground"
+                        >
+                          {item}
+                        </li>
+                      ))
+                    )}
                   </ul>
                 </CardContent>
               </Card>

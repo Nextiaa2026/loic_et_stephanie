@@ -13,7 +13,7 @@ const playfair = Playfair_Display({
 export const metadata = {
   title: "Notre Histoire — Loïc & Stéphanie",
   description:
-    "Découvrez l'histoire d'amour de Loïc et Stéphanie, de leur première rencontre jusqu'à la demande en mariage.",
+    "De la rencontre à la demande en mariage (7 mars 2026) et à ce nouveau chapitre que nous écrivons avec Dieu au centre.",
 };
 
 export default function NotreHistoirePage() {
@@ -25,7 +25,7 @@ export default function NotreHistoirePage() {
           {/* Hero Image */}
           <section className="py-6 sm:py-10">
             <figure className="mx-auto w-full max-w-xl overflow-hidden">
-              <div className="relative aspect-[3/4] sm:aspect-[4/5]">
+              <div className="relative aspect-3/4 sm:aspect-4/5">
                 <Image
                   src="/d76a6df3-2ca2-4291-a0a9-4203ea8d392f.jpeg"
                   alt="Loïc et Stéphanie"
@@ -191,86 +191,155 @@ export default function NotreHistoirePage() {
               </p>
             </section>
 
-            {/* La Demande en Mariage */}
+            {/* La demande en mariage */}
             <section>
               <h2
                 className={`${playfair.className} mb-4 text-xl font-semibold not-italic tracking-tight text-foreground sm:text-2xl`}
               >
-                La Demande en Mariage
+                La demande en mariage
               </h2>
               <p>
-                En prélude à la demande, Loïc avait soigneusement organisé une
-                véritable opération secrète.
+                Le 7 mars 2026 était déjà une journée symbolique : la fin de
+                cinq années d&apos;études, marquées par des efforts constants,
+                des nuits blanches, des réussites, des doutes… et une fierté
+                immense.
+              </p>
+              <p className="mt-4">Stéphanie recevait enfin son diplôme.</p>
+              <p className="mt-4">
+                Mais pour Loïc, cette journée allait porter une autre
+                signification.
+              </p>
+              <p className="mt-4">
+                En coulisses, il avait monté une véritable petite mission.
+              </p>
+              <p className="mt-4">
+                Une mission qui impliquait : Ulrich, Clide, Aubin, Dimitri, et
+                les deux amies proches de Stéphanie, Angela et Stéphanie.
+              </p>
+              <p className="mt-4">Tous étaient dans la confidence.</p>
+              <p>Tous attendaient le moment précis.</p>
+              <p>Sauf… Stéphanie.</p>
+              <p className="mt-4">
+                Quelques jours avant la cérémonie, Angela et Stéphanie
+                insistaient :
+              </p>
+              <p className="font-medium text-foreground not-italic">
+                « Tu dois être magnifique, c&apos;est un grand jour ! Coiffure,
+                ongles, tenue… fais-toi belle. »
+              </p>
+              <p className="mt-4">
+                Stéphanie s&apos;exécutait, touchée par l&apos;attention de ses
+                amies.
+              </p>
+              <p className="mt-4 text-muted-foreground/95">
+                (Elle ne savait pas encore que leur insistance cachait un secret
+                bien plus grand que la remise de diplôme.)
+              </p>
+              <p className="mt-4">
+                Pendant ce temps, Loïc, étrangement indisponible, avait trouvé
+                l&apos;excuse la moins crédible du monde :
+              </p>
+              <p className="font-medium text-foreground not-italic">
+                « Je suis à Leroy Merlin pour acheter de la viande. »
+              </p>
+              <p className="mt-4 text-muted-foreground/95">
+                (Encore aujourd&apos;hui, on ne sait pas comment Stéphanie
+                n&apos;a pas compris que quelque chose se tramait…)
+              </p>
+              <p className="mt-4">Puis vint le soir.</p>
+              <p className="mt-4">
+                Nous avons franchi la porte du lieu de réception, main dans la
+                main.
+              </p>
+              <p className="mt-4">
+                Stéphanie pensait rejoindre un petit dîner entre amis pour
+                célébrer ce diplôme.
+              </p>
+              <p className="mt-4">
+                Mais dès l&apos;instant où nous sommes entrés… tout s&apos;est
+                arrêté.
+              </p>
+              <p className="mt-4">Ce n&apos;était pas un dîner intime.</p>
+              <p>Ce n&apos;était pas une simple célébration de fin d&apos;études.</p>
+              <p className="mt-4 font-medium text-foreground not-italic">
+                C&apos;était le début de nos fiançailles.
+              </p>
+              <p className="mt-4">Un décor préparé avec soin.</p>
+              <p>Des visages familiers.</p>
+              <p>
+                Des sourires, des regards complices, des émotions contenues.
+              </p>
+              <p className="mt-4">Et au centre… Loïc.</p>
+              <p className="mt-4">
+                Stéphanie a senti son cœur battre plus vite.
               </p>
               <p>
-                Complice discret, il s&apos;était entendu avec Eva, la sœur de
-                Stéphanie, pour imaginer une mise en scène qui resterait gravée
-                dans nos mémoires.
+                Les larmes lui sont montées aux yeux avant même de comprendre ce
+                qui se passait.
               </p>
               <p className="mt-4">
-                Presque tout le monde était dans la confidence… sauf Stéphanie.
+                C&apos;était beau, intense, surprenant… irréel.
               </p>
+              <p className="mt-4">Loïc s&apos;est avancé.</p>
+              <p>Avec calme. Avec certitude.</p>
+              <p>Avec amour.</p>
               <p className="mt-4">
-                Avant même de quitter la maison, quelques signes étaient
-                pourtant là :
+                Et dans ce moment suspendu, où le monde semblait tenir son
+                souffle,
               </p>
               <p>
-                Stéphanie avait croisé Jordan, son frère, qui lui avait glissé
-                en passant qu&apos;il se rendait, lui aussi, à un anniversaire.
+                il a demandé à Stéphanie de devenir sa fiancée.
               </p>
-              <p>
-                De son côté, sa maman semblait particulièrement insistante sur
-                le fait de ne pas arriver trop en retard — une attitude
-                inhabituelle pour un simple anniversaire, mais qui n&apos;avait
-                pas éveillé de soupçons.
-              </p>
+              <p className="mt-4">La réponse a coulé d&apos;elle-même.</p>
+              <p>Un oui rempli de joie, de gratitude, de lumière.</p>
               <p className="mt-4">
-                Tout paraissait normal. Stéphanie restait sans aucun doute.
+                Un oui qui n&apos;était pas seulement une réponse…
               </p>
-              <p className="mt-4">
-                En franchissant la porte, tout bascula. Ce n&apos;était pas
-                Ariane que l&apos;on attendait.
-              </p>
-              <p>Ce n&apos;était pas un anniversaire.</p>
-              <p className="mt-4 font-medium text-foreground">
-                C&apos;était nos fiançailles.
-              </p>
-              <p className="mt-4">
-                Stéphanie, surprise et émue, découvrit un décor soigneusement
-                préparé, nos familles et amis rassemblés, et au centre, Loïc
-                prêt à faire sa demande.
-              </p>
-              <p>
-                Un instant suspendu, plein d&apos;amour, de tendresse et de
-                promesses partagées.
-              </p>
+              <p>mais une promesse pour la vie.</p>
             </section>
 
-            {/* Un Nouveau Chapitre */}
+            {/* Un nouveau chapitre */}
             <section className="rounded-2xl border border-border/60 bg-card px-6 py-8 sm:px-10 sm:py-10">
               <h2
                 className={`${playfair.className} mb-4 text-xl font-semibold not-italic tracking-tight text-foreground sm:text-2xl`}
               >
-                ✨ Un Nouveau Chapitre
+                Un nouveau chapitre
               </h2>
               <p>
-                Aujourd&apos;hui, nous avançons main dans la main, heureux de
-                partager cette aventure avec vous.
+                Aujourd&apos;hui, nous avançons ensemble, confiants et
+                reconnaissants pour tout ce que Dieu a commencé en nous.
               </p>
               <p className="mt-4">
-                Chaque sourire, chaque regard échangé avec vous nous donne
-                encore plus de sens à ce chemin parcouru.
+                Chaque pas, chaque geste, chaque moment partagé témoigne de Sa
+                fidélité dans notre histoire.
               </p>
               <p className="mt-4">
-                Notre histoire continue de s&apos;écrire, portée par
-                l&apos;amour, la confiance et l&apos;évidence.
+                Les sourires, les paroles et la présence de ceux que nous aimons
+                donnent encore plus de sens à ce chemin que nous construisons
+                jour après jour.
               </p>
               <p className="mt-4">
-                Merci d&apos;être à nos côtés pour célébrer le début de cette
-                nouvelle page.
+                Rien n&apos;a été laissé au hasard : Dieu a guidé, ouvert les
+                portes, et placé sur notre route des signes que nos cœurs ont su
+                reconnaître.
               </p>
-              <p className="mt-4 font-medium text-foreground">
-                Bienvenue dans notre bonheur. Bienvenue dans notre histoire.
+              <p className="mt-4">
+                Notre histoire continue de s&apos;écrire avec Lui au centre,
+                portée par l&apos;amour, la confiance et l&apos;assurance douce
+                que nos vies avancent dans la bonne direction.
+              </p>
+              <p className="mt-4">
+                Merci d&apos;être à nos côtés pour célébrer l&apos;ouverture de
+                cette nouvelle page.
+              </p>
+              <p className="mt-4 font-medium text-foreground not-italic">
+                Bienvenue dans notre joie.
+              </p>
+              <p className="font-medium text-foreground not-italic">
+                Bienvenue dans ce que Dieu bâtit à travers nous.
+              </p>
+              <p className="mt-6 text-sm font-medium tracking-wide text-muted-foreground not-italic">
+                #SL2026 · #assoke2026
               </p>
             </section>
           </article>

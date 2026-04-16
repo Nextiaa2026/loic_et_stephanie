@@ -39,7 +39,7 @@ export function HeroPortrait({ serifClassName }: HeroPortraitProps) {
               animate={reduce ? undefined : { opacity: 1, y: 0 }}
               transition={{ delay: 0.12, duration: 0.5 }}
             >
-              #LS2026
+              #SL2026 · #assoke2026
             </motion.p>
             <motion.h1
               className={cn(

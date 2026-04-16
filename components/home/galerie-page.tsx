@@ -1,7 +1,9 @@
 "use client";
 
 import Image from "next/image";
+import { useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
+import { GalleryLightbox } from "@/components/home/gallery-lightbox";
 import { cn } from "@/lib/utils";
 import { SiteHeader } from "./site-header";
 import { SiteFooter } from "./site-footer";
@@ -38,10 +40,20 @@ type GaleriePageProps = { serifClassName: string };
 
 export function GaleriePage({ serifClassName }: GaleriePageProps) {
   const reduce = useReducedMotion();
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [lightboxIndex, setLightboxIndex] = useState(0);
+
+  const lightboxItems = galleryImages.map(({ src, alt }) => ({ src, alt }));
 
   return (
     <div className="min-h-screen bg-background text-foreground">
       <PageContainer>
+        <GalleryLightbox
+          images={lightboxItems}
+          open={lightboxOpen}
+          startIndex={lightboxIndex}
+          onClose={() => setLightboxOpen(false)}
+        />
         <SiteHeader serifClassName={serifClassName} />
         <main className="py-14 sm:py-20">
           {/* Video hero */}
@@ -70,9 +82,11 @@ export function GaleriePage({ serifClassName }: GaleriePageProps) {
 
           <div className="mt-10 grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3">
             {galleryImages.map((img, i) => (
-              <motion.div
+              <motion.button
                 key={img.src}
-                className="relative h-52 overflow-hidden rounded-2xl bg-muted sm:h-64 md:h-72"
+                type="button"
+                aria-label={`Agrandir : ${img.alt}`}
+                className="group relative h-52 cursor-zoom-in overflow-hidden rounded-2xl bg-muted text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 sm:h-64 md:h-72"
                 initial={reduce ? false : { opacity: 0, y: 22 }}
                 whileInView={reduce ? undefined : { opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-8%" }}
@@ -82,14 +96,19 @@ export function GaleriePage({ serifClassName }: GaleriePageProps) {
                   ease: [0.22, 1, 0.36, 1],
                 }}
                 whileHover={reduce ? undefined : { scale: 1.015 }}
+                onClick={() => {
+                  setLightboxIndex(i);
+                  setLightboxOpen(true);
+                }}
               >
                 <Image
                   src={img.src}
-                  alt={img.alt}
+                  alt=""
                   fill
-                  className="object-cover"
+                  className="object-cover transition duration-300 group-hover:brightness-[1.03]"
                 />
-              </motion.div>
+                <span className="sr-only">{img.alt}</span>
+              </motion.button>
             ))}
           </div>
         </main>

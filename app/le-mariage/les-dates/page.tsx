@@ -20,22 +20,31 @@ const playfair = Cormorant_Garamond({
 
 const events = [
   {
-    title: "Mariage Traditionnel",
+    title: "Mariage traditionnel",
     date: "Samedi 26 juillet 2026",
     time: "10h00",
-    location: "La Vallée de Bana",
+    location: "Mfou — La Boulangerie du Peuple",
     description:
       "Un hommage vibrant à nos racines. Cette cérémonie, empreinte de symboles, marquera l'union de nos familles dans la plus belle tradition. Un moment de partage, de rituels et d'émotions.",
     image: "/1069335d-befc-4cff-bff6-66d308050085.jpeg",
   },
   {
-    title: "Mariage Religieux",
+    title: "Mariage religieux",
     date: "Samedi 02 août 2026",
     time: "11h00",
-    location: "Monastère des bénédictins, Mont Febe — Yaoundé",
+    location: "Cathédrale Poste Central",
     description:
       "Une promesse sacrée devant Dieu et nos proches. Nous scellerons notre engagement au cœur d'une célébration spirituelle, élégante et solennelle. L'amour élevé à sa plus belle dimension.",
     image: "/4097433a-e1cd-4404-b530-2303186ea48b.jpeg",
+  },
+  {
+    title: "Mariage civil",
+    date: "Date à confirmer",
+    time: "—",
+    location: "Limbes",
+    description:
+      "L’officialisation de notre union devant la loi. Les détails (jour et heure) vous seront communiqués en temps utile.",
+    image: "/6b069496-a6e3-477d-b886-2c1f901cf087.jpeg",
   },
 ];
 
@@ -56,8 +65,8 @@ export default function LesDatesPage() {
               Les Dates
             </h1>
             <p className="mx-auto mt-4 max-w-lg text-base text-muted-foreground">
-              Deux cérémonies, deux moments uniques pour célébrer notre
-              union. Voici les dates à retenir.
+              Trois temps forts pour célébrer notre union : tradition, foi et
+              civil. Voici les informations à retenir.
             </p>
             <Separator className="mx-auto mt-8 max-w-24" />
           </section>
@@ -67,7 +76,7 @@ export default function LesDatesPage() {
             {events.map((event, i) => (
               <div key={i} className="flex flex-col items-center">
                 <figure className="w-full">
-                  <div className="relative mx-auto aspect-[3/4] w-full max-w-lg overflow-hidden rounded-2xl bg-muted">
+                  <div className="relative mx-auto aspect-3/4 w-full max-w-lg overflow-hidden rounded-2xl bg-muted">
                     <Image
                       src={event.image}
                       alt={event.title}

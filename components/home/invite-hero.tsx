@@ -57,16 +57,25 @@ export function InviteHero({ serifClassName }: InviteHeroProps) {
           Chaque moment comptera, chaque sourire sera un souvenir.
         </motion.p>
         <motion.p
+          className="mt-8 text-[10px] font-medium tracking-[0.32em] text-white/65 sm:text-[11px]"
+          initial={reduce ? false : { opacity: 0, y: 10 }}
+          whileInView={reduce ? undefined : { opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.16 }}
+        >
+          #SL2026 · #assoke2026
+        </motion.p>
+        <motion.p
           className={cn(
             serifClassName,
-            "mt-10 text-3xl font-normal text-white/90",
+            "mt-6 text-3xl font-normal text-white/90",
           )}
           initial={reduce ? false : { opacity: 0, y: 10 }}
           whileInView={reduce ? undefined : { opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          LS
+          SL
         </motion.p>
       </div>
     </section>

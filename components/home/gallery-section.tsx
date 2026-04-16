@@ -1,8 +1,13 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 
+import { Button } from "@/components/ui/button";
+import { GalleryLightbox } from "@/components/home/gallery-lightbox";
 import { cn } from "@/lib/utils";
 
 type GallerySectionProps = {
@@ -47,17 +52,21 @@ function GalleryCell({
   delay,
   src,
   alt,
+  onOpen,
 }: {
   className?: string;
   delay: number;
   src: string;
   alt: string;
+  onOpen: () => void;
 }) {
   const reduce = useReducedMotion();
   return (
-    <motion.div
+    <motion.button
+      type="button"
+      aria-label={`Agrandir : ${alt}`}
       className={cn(
-        "relative overflow-hidden rounded-[1.75rem] bg-muted",
+        "group relative cursor-zoom-in overflow-hidden rounded-[1.75rem] bg-muted text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2",
         className,
       )}
       initial={reduce ? false : { opacity: 0, y: 22 }}
@@ -65,21 +74,35 @@ function GalleryCell({
       viewport={{ once: true, margin: "-8%" }}
       transition={{ duration: 0.65, delay, ease: [0.22, 1, 0.36, 1] }}
       whileHover={reduce ? undefined : { scale: 1.015 }}
+      onClick={onOpen}
     >
       <Image
         src={src}
-        alt={alt}
+        alt=""
         fill
         sizes="(max-width: 768px) 50vw, 33vw"
-        className="object-cover"
+        className="object-cover transition duration-300 group-hover:brightness-[1.03]"
       />
-    </motion.div>
+      <span className="sr-only">{alt}</span>
+    </motion.button>
   );
 }
 
 export function GallerySection({ serifClassName }: GallerySectionProps) {
+  const reduce = useReducedMotion();
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [lightboxIndex, setLightboxIndex] = useState(0);
+
+  const lightboxItems = galleryImages.map(({ src, alt }) => ({ src, alt }));
+
   return (
     <section id="galerie" className="w-full py-12 sm:py-20">
+      <GalleryLightbox
+        images={lightboxItems}
+        open={lightboxOpen}
+        startIndex={lightboxIndex}
+        onClose={() => setLightboxOpen(false)}
+      />
       <p className="text-center text-[11px] font-medium tracking-[0.4em] text-muted-foreground uppercase">
         Notre galerie
       </p>
@@ -100,9 +123,53 @@ export function GallerySection({ serifClassName }: GallerySectionProps) {
             delay={i * 0.05}
             src={img.src}
             alt={img.alt}
+            onOpen={() => {
+              setLightboxIndex(i);
+              setLightboxOpen(true);
+            }}
           />
         ))}
       </div>
+
+      <motion.div
+        className="mx-auto mt-12 max-w-2xl text-center sm:mt-14"
+        initial={reduce ? false : { opacity: 0, y: 16 }}
+        whileInView={reduce ? undefined : { opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-8%" }}
+        transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
+      >
+        <p
+          className={cn(
+            serifClassName,
+            "text-[1.05rem] leading-[1.65] text-muted-foreground sm:text-lg sm:leading-[1.7]",
+          )}
+        >
+          Ce que vous voyez ici n&apos;est qu&apos;un avant-goût : notre{" "}
+          <span className="font-medium text-foreground">
+            galerie complète
+          </span>{" "}
+          rassemble tous les instants qui nous tiennent à cœur — rires, regards,
+          détails du grand jour — pour vous faire vivre notre histoire en
+          images, au fil du défilement.
+        </p>
+        <div className="mt-8 flex flex-col items-center gap-4">
+          <Button
+            size="lg"
+            className="h-14 rounded-full bg-primary px-8 text-sm text-primary-foreground tracking-[0.12em] uppercase hover:bg-primary/90 sm:px-10 sm:tracking-[0.18em]"
+          >
+            <Link href="/galerie" className="inline-flex items-center gap-2">
+              Découvrir la galerie complète
+              <ArrowRight className="size-4" aria-hidden />
+            </Link>
+          </Button>
+          <Link
+            href="/galerie"
+            className="text-sm font-medium text-primary underline decoration-primary/35 underline-offset-4 transition-colors hover:text-primary/85"
+          >
+            ou ouvrir directement la page Galerie
+          </Link>
+        </div>
+      </motion.div>
     </section>
   );
 }
