@@ -25,7 +25,7 @@ export function HeroPortrait({ serifClassName }: HeroPortraitProps) {
         <AspectRatio ratio={4 / 5} className="bg-muted md:aspect-16/7">
           <Image
             src="/jl_2026_main_hero.jpeg"
-            alt="Loïc et Stéphanie"
+            alt="Stéphanie et Loïc"
             fill
             sizes="100vw"
             className="object-cover"
@@ -39,7 +39,7 @@ export function HeroPortrait({ serifClassName }: HeroPortraitProps) {
               animate={reduce ? undefined : { opacity: 1, y: 0 }}
               transition={{ delay: 0.12, duration: 0.5 }}
             >
-              #SL2026 · #assoke2026
+              #LS2026 · #ASSOKE2026
             </motion.p>
             <motion.h1
               className={cn(
@@ -50,7 +50,7 @@ export function HeroPortrait({ serifClassName }: HeroPortraitProps) {
               animate={reduce ? undefined : { opacity: 1, y: 0 }}
               transition={{ delay: 0.18, duration: 0.6 }}
             >
-              Loïc & Stéphanie — Pour La Vie
+              Stéphanie & Loïc — Pour La Vie
             </motion.h1>
             <motion.p
               className="max-w-md text-sm leading-[1.55] font-normal text-white/88 sm:text-base sm:leading-[1.65]"

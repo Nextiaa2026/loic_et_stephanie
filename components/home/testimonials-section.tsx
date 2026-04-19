@@ -19,7 +19,7 @@ type TestimonialsSectionProps = {
 const cards = [
   {
     quote:
-      "À première vue, tout semble vous opposer. D'un côté, Loïc, discret et réservé, presque timide. De l'autre, Stéphanie, véritable boule d'énergie, rayonnante et pleine de vie. Et pourtant... vous êtes la plus belle preuve que les contraires ne s'opposent pas, mais se complètent. Là où l'un apaise, l'autre insuffle l'élan ; là où l'un observe, l'autre illumine. Aujourd'hui, vous formez un couple harmonieux, complice et profondément uni, où chacun semble avoir trouvé en l'autre son équilibre. Nous vous souhaitons de cultiver cette belle complicité encore longtemps, et de continuer à avancer ensemble, main dans la main, avec amour, joie et bonheur.",
+      "À première vue, tout semble vous opposer. D'un côté, Stéphanie, véritable boule d'énergie, rayonnante et pleine de vie. De l'autre, Loïc, discret et réservé, presque timide. Et pourtant... vous êtes la plus belle preuve que les contraires ne s'opposent pas, mais se complètent. Là où l'un apaise, l'autre insuffle l'élan ; là où l'un observe, l'autre illumine. Aujourd'hui, vous formez un couple harmonieux, complice et profondément uni, où chacun semble avoir trouvé en l'autre son équilibre. Nous vous souhaitons de cultiver cette belle complicité encore longtemps, et de continuer à avancer ensemble, main dans la main, avec amour, joie et bonheur.",
     primary: "Ulrich & Dimitri",
     secondary: null,
     primaryClass: "font-semibold text-foreground",

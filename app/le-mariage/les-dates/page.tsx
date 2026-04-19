@@ -5,12 +5,7 @@ import { PageContainer } from "@/components/home/page-container";
 import { PageHeroVertical } from "@/components/home/page-hero-vertical";
 import { SiteHeader } from "@/components/home/site-header";
 import { SiteFooter } from "@/components/home/site-footer";
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+
 
 const playfair = Cormorant_Garamond({
   subsets: ["latin"],
@@ -27,18 +22,18 @@ const events = [
     mapsUrl:
       "https://www.google.com/maps/search/?api=1&query=Mfou+La+Boulangerie+du+Peuple",
     description:
-      "Un hommage vibrant à nos racines. Cette cérémonie, empreinte de symboles, marquera l'union de nos familles dans la plus belle tradition. Un moment de partage, de rituels et d'émotions.",
+      "Un rendez-vous avec nos origines, placé sous le signe du respect des coutumes. Ce moment unique réunira nos familles autour de valeurs essentielles, dans une atmosphère de partage, de traditions et d’émotions sincères.",
     image: "/jl_2026_09.jpeg",
   },
   {
     title: "Mariage religieux",
     date: "Samedi 02 août 2026",
     time: "11h00",
-    location: "Cathédrale Poste Central",
+    location: "Cathédrale Notre dame des victoires, Poste centrale, Yaoundé",
     mapsUrl:
-      "https://www.google.com/maps/search/?api=1&query=Cathedrale+Poste+Central+Yaounde",
+      "https://www.google.com/maps/search/?api=1&query=Cathedrale+Notre+dame+des+victoires+Poste+centrale+Yaounde",
     description:
-      "Une promesse sacrée devant Dieu et nos proches. Nous scellerons notre engagement au cœur d'une célébration spirituelle, élégante et solennelle. L'amour élevé à sa plus belle dimension.",
+      "Dans la foi et la présence divine, nous unirons nos vies par un engagement sacré. Cette cérémonie solennelle célèbrera un amour porté par la grâce et la spiritualité.",
     image: "/jl_2026_02.jpeg",
   },
   {

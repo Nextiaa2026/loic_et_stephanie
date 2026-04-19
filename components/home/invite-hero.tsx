@@ -18,7 +18,7 @@ export function InviteHero({ serifClassName }: InviteHeroProps) {
     >
       <Image
         src="/jl_2026_08.jpeg"
-        alt="Loïc et Stéphanie"
+        alt="Stéphanie et Loïc"
         fill
         className="object-cover object-center"
       />
@@ -63,7 +63,7 @@ export function InviteHero({ serifClassName }: InviteHeroProps) {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.16 }}
         >
-          #SL2026 · #assoke2026
+          #LS2026 · #ASSOKE2026
         </motion.p>
         <motion.p
           className={cn(
@@ -75,7 +75,7 @@ export function InviteHero({ serifClassName }: InviteHeroProps) {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          SL
+          LS
         </motion.p>
       </div>
     </section>

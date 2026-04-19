@@ -54,12 +54,12 @@ export function EventHighlight({ serifClassName }: EventHighlightProps) {
           </a>
         </div>
         <div className="mx-auto mt-6 max-w-xl space-y-1 text-sm leading-relaxed text-muted-foreground sm:text-base">
-          <p>Un hommage vibrant à nos racines.</p>
           <p>
-            Cette cérémonie, empreinte de symboles, marquera l&apos;union de nos
-            familles dans la plus belle tradition.
+            Un rendez-vous avec nos origines, placé sous le signe du respect des
+            coutumes. Ce moment unique réunira nos familles autour de valeurs
+            essentielles, dans une atmosphère de partage, de traditions et
+            d’émotions sincères.
           </p>
-          <p>Un moment de partage, de rituels et d&apos;émotions</p>
         </div>
       </Reveal>
     </section>

@@ -14,7 +14,7 @@ export function SiteFooter() {
           </a>
         </p>
         <p>
-          Droit d&apos;auteur &copy; {new Date().getFullYear()} Loïc et Stéphanie
+          Droit d&apos;auteur &copy; {new Date().getFullYear()} Stéphanie et Loïc
         </p>
       </div>
     </footer>

@@ -44,22 +44,21 @@ export function EventReligious({ serifClassName }: EventReligiousProps) {
             <span>Samedi 02 août 2026</span>
           </p>
           <a
-            href="https://www.google.com/maps/search/?api=1&query=Cathedrale+Poste+Central+Yaounde"
+            href="https://www.google.com/maps/search/?api=1&query=Cathedrale+Notre+dame+des+victoires+Poste+centrale+Yaounde"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 underline decoration-primary/40 underline-offset-4 transition-colors hover:text-foreground"
           >
             <MapPin className="size-3.5 shrink-0" aria-hidden />
-            <span>Cathédrale Poste Central</span>
+            <span>Cathédrale Notre dame des victoires, Poste centrale, Yaoundé</span>
           </a>
         </div>
         <div className="mx-auto mt-6 max-w-xl space-y-1 text-sm leading-relaxed text-muted-foreground sm:text-base">
-          <p>Une promesse sacrée devant Dieu et nos proches.</p>
           <p>
-            Nous scellerons notre engagement au cœur d&apos;une célébration
-            spirituelle, élégante et solennelle.
+            Dans la foi et la présence divine, nous unirons nos vies par un
+            engagement sacré. Cette cérémonie solennelle célèbrera un amour
+            porté par la grâce et la spiritualité.
           </p>
-          <p>L&apos;amour élevé à sa plus belle dimension.</p>
         </div>
       </Reveal>
     </section>

@@ -1,11 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { cn } from "@/lib/utils";
 
-type RsvpFormProps = { serifClassName: string };
-
-export function RsvpForm({ serifClassName }: RsvpFormProps) {
+export function RsvpForm() {
   const [status, setStatus] = useState<
     "idle" | "loading" | "success" | "error"
   >("idle");
@@ -16,13 +13,18 @@ export function RsvpForm({ serifClassName }: RsvpFormProps) {
     const form = e.currentTarget;
     const data = new FormData(form);
 
-    // TODO: replace with your Google Apps Script Web App URL
-    const SHEET_URL = process.env.NEXT_PUBLIC_GOOGLE_SHEET_URL ?? "";
-
     try {
-      await fetch(SHEET_URL, { method: "POST", body: data, mode: "no-cors" });
-      setStatus("success");
-      form.reset();
+      const response = await fetch("/api/rsvp", {
+        method: "POST",
+        body: data,
+      });
+
+      if (response.ok) {
+        setStatus("success");
+        form.reset();
+      } else {
+        setStatus("error");
+      }
     } catch {
       setStatus("error");
     }
@@ -39,10 +41,10 @@ export function RsvpForm({ serifClassName }: RsvpFormProps) {
         />
       </div>
       <div className="flex flex-col gap-1.5">
-        <label className="text-sm text-foreground/80">Votre e-mail</label>
+        <label className="text-sm text-foreground/80">Votre téléphone</label>
         <input
-          name="email"
-          type="email"
+          name="telephone"
+          type="tel"
           required
           className="rounded-md border border-border bg-background px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-pink-400"
         />

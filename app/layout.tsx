@@ -26,8 +26,8 @@ const serifFont = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Loïc & Stéphanie — Notre Mariage",
-  description: "Rejoignez-nous pour célébrer l'union de Loïc et Stéphanie. Découvrez les détails de notre mariage, notre histoire et toutes les informations pratiques.",
+  title: "Stéphanie & Loïc — Notre Mariage",
+  description: "Rejoignez-nous pour célébrer l'union de Stéphanie et Loïc. Découvrez les détails de notre mariage, notre histoire et toutes les informations pratiques.",
 };
 
 export default function RootLayout({

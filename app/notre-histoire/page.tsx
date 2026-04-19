@@ -11,7 +11,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata = {
-  title: "Notre Histoire — Loïc & Stéphanie",
+  title: "Notre Histoire — Stéphanie & Loïc",
   description:
     "De la rencontre à la demande en mariage (7 mars 2026) et à ce nouveau chapitre que nous écrivons avec Dieu au centre.",
 };
@@ -26,7 +26,7 @@ type TimelineEvent = {
 const timelineEvents: TimelineEvent[] = [
   {
     date: "6 janvier 2023",
-    title: "La Rencontre",
+    title: "La rencontre",
     paragraphs: [
       "Parfois, les plus belles histoires commencent lorsqu'on s'y attend le moins.",
       "Notre rencontre, nous la devons à deux précieux complices : Marie et David.",
@@ -40,7 +40,7 @@ const timelineEvents: TimelineEvent[] = [
   },
   {
     date: "Février 2023",
-    title: "L'Officialisation",
+    title: "L'officialisation",
     paragraphs: [
       "Un mois après notre rencontre, notre lien était devenu indéniable.",
       "Nous nous retrouvions chaque semaine avec enthousiasme, heureux de prolonger ces échanges si simples, si naturels.",
@@ -54,7 +54,7 @@ const timelineEvents: TimelineEvent[] = [
   },
   {
     date: "7 mars 2026",
-    title: "La Demande en Mariage",
+    title: "La demande",
     paragraphs: [
       "Le 7 mars 2026 était déjà une journée symbolique : la fin de cinq années d'études pour Stéphanie, marquées par des efforts constants, des nuits blanches, des réussites, des doutes… et une immense fierté.",
       "Mais pour Loïc, cette journée allait porter une autre signification. En coulisses, il avait monté une véritable petite mission avec leurs proches.",
@@ -120,7 +120,7 @@ export default function NotreHistoirePage() {
               <h2
                 className={`${playfair.className} mb-4 text-xl font-semibold not-italic tracking-tight text-foreground sm:text-2xl`}
               >
-                Un nouveau chapitre
+                Nouveau chap
               </h2>
               <p>
                 Aujourd&apos;hui, nous avançons ensemble, confiants et
@@ -156,7 +156,7 @@ export default function NotreHistoirePage() {
                 Bienvenue dans ce que Dieu bâtit à travers nous.
               </p>
               <p className="mt-6 text-sm font-medium tracking-wide text-muted-foreground not-italic">
-                #SL2026 · #assoke2026
+                #LS2026 · #ASSOKE2026
               </p>
             </section>
           </article>

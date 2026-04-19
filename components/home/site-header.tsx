@@ -58,7 +58,7 @@ export function SiteHeader({ serifClassName }: SiteHeaderProps) {
         >
           <Image
             src="/logo.svg"
-            alt="Loïc & Stéphanie"
+            alt="Stéphanie & Loïc"
             width={44}
             height={44}
             className="h-10 w-10 sm:h-11 sm:w-11"
@@ -70,7 +70,7 @@ export function SiteHeader({ serifClassName }: SiteHeaderProps) {
               "text-[1.22rem] leading-none font-semibold tracking-tight text-foreground sm:text-base sm:font-medium sm:text-muted-foreground",
             )}
           >
-            Loïc & Stéphanie
+            Stéphanie & Loïc
           </span>
         </Link>
 

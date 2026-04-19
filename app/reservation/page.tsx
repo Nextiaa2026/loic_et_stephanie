@@ -30,7 +30,7 @@ export default function ReservationPage() {
             <div className="relative h-64 w-full sm:h-96 md:h-112">
               <Image
                 src="/jl_2026_06.jpeg"
-                alt="Loïc et Stéphanie"
+                alt="Stéphanie et Loïc"
                 fill
                 className="object-cover object-[center_35%]"
               />
@@ -47,7 +47,7 @@ export default function ReservationPage() {
                 Confirmez Votre Présence En Remplissant Ce Formulaire
               </h1>
             </div>
-            <RsvpForm serifClassName={playfair.className} />
+            <RsvpForm />
           </div>
         </main>
         <SiteFooter />

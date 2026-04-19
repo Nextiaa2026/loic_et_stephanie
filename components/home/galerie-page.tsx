@@ -6,7 +6,6 @@ import { motion, useReducedMotion } from "framer-motion";
 import { X } from "lucide-react";
 import { GalleryLightbox } from "@/components/home/gallery-lightbox";
 import { PageHeroVertical } from "@/components/home/page-hero-vertical";
-import { cn } from "@/lib/utils";
 import { SiteHeader } from "./site-header";
 import { SiteFooter } from "./site-footer";
 import { PageContainer } from "./page-container";
@@ -14,51 +13,51 @@ import { PageContainer } from "./page-container";
 const galleryImages = [
   {
     src: "/jl_2026_main_hero.jpeg",
-    alt: "Loïc et Stéphanie",
+    alt: "Stéphanie et Loïc",
   },
   {
     src: "/jl_2026_01.jpeg",
-    alt: "Loïc et Stéphanie",
+    alt: "Stéphanie et Loïc",
   },
   {
     src: "/jl_2026_02.jpeg",
-    alt: "Loïc et Stéphanie",
+    alt: "Stéphanie et Loïc",
   },
   {
     src: "/jl_2026_03.jpeg",
-    alt: "Loïc et Stéphanie",
+    alt: "Stéphanie et Loïc",
   },
   {
     src: "/jl_2026_04.jpeg",
-    alt: "Loïc et Stéphanie",
+    alt: "Stéphanie et Loïc",
   },
   {
     src: "/jl_2026_05.jpeg",
-    alt: "Loïc et Stéphanie",
+    alt: "Stéphanie et Loïc",
   },
   {
     src: "/jl_2026_06.jpeg",
-    alt: "Loïc et Stéphanie",
+    alt: "Stéphanie et Loïc",
   },
   {
     src: "/jl_2026_08.jpeg",
-    alt: "Loïc et Stéphanie",
+    alt: "Stéphanie et Loïc",
   },
   {
     src: "/jl_2026_07.jpeg",
-    alt: "Loïc et Stéphanie",
+    alt: "Stéphanie et Loïc",
   },
   {
     src: "/jl_2026_09.jpeg",
-    alt: "Loïc et Stéphanie",
+    alt: "Stéphanie et Loïc",
   },
   {
     src: "/jl_2026_10.jpeg",
-    alt: "Loïc et Stéphanie",
+    alt: "Stéphanie et Loïc",
   },
   {
     src: "/jl_2026_11.jpeg",
-    alt: "Loïc et Stéphanie",
+    alt: "Stéphanie et Loïc",
   },
 ];
 
