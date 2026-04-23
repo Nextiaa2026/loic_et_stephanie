@@ -16,7 +16,7 @@ const playfair = Cormorant_Garamond({
 const events = [
   {
     title: "Mariage traditionnel",
-    date: "Samedi 26 juillet 2026",
+    date: "Mercredi 05 août 2026",
     time: "10h00",
     location: "Mfou — La Boulangerie du Peuple",
     mapsUrl:
@@ -27,7 +27,7 @@ const events = [
   },
   {
     title: "Mariage religieux",
-    date: "Samedi 02 août 2026",
+    date: "Vendredi 07 août 2026",
     time: "11h00",
     location: "Cathédrale Notre dame des victoires, Poste centrale, Yaoundé",
     mapsUrl:
@@ -97,9 +97,9 @@ export default function LesDatesPage() {
                       href={event.mapsUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 underline decoration-primary/40 underline-offset-4 transition-colors hover:text-foreground"
+                      className="inline-flex w-full max-w-136 items-start justify-center gap-2 text-center underline decoration-primary/40 underline-offset-4 transition-colors hover:text-foreground"
                     >
-                      <MapPin className="size-4 shrink-0 text-primary" aria-hidden />
+                      <MapPin className="mt-0.5 size-4 shrink-0 text-primary" aria-hidden />
                       <span>{event.location}</span>
                     </a>
                   </div>

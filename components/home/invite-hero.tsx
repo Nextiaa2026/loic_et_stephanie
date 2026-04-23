@@ -63,7 +63,7 @@ export function InviteHero({ serifClassName }: InviteHeroProps) {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.16 }}
         >
-          #LS2026 · #ASSOKE2026
+          #SL2026 · #ASSOKE2026
         </motion.p>
         <motion.p
           className={cn(
@@ -75,7 +75,7 @@ export function InviteHero({ serifClassName }: InviteHeroProps) {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          LS
+          SL
         </motion.p>
       </div>
     </section>

@@ -7,7 +7,7 @@ import { cn } from "@/lib/utils";
 const faqs = [
   {
     q: "Quand et où aura lieu le mariage ?",
-    a: "Le mariage traditionnel aura lieu le samedi 26 juillet 2026 à Mfou, La Boulangerie du Peuple. Le mariage religieux se tiendra le samedi 2 août 2026 à la Cathédrale Poste Central. Le mariage civil se déroulera à Limbes (date à confirmer).",
+    a: "Le mariage traditionnel aura lieu le mercredi 05 août 2026 à Mfou, La Boulangerie du Peuple. Le mariage religieux se tiendra le vendredi 07 août 2026 à la Cathédrale Poste Central. Le mariage civil se déroulera à Limbes (date à confirmer).",
   },
   {
     q: "Comment confirmer ma présence ?",

@@ -34,12 +34,12 @@ export function HeroPortrait({ serifClassName }: HeroPortraitProps) {
           <div className="absolute inset-0 bg-linear-to-t from-neutral-950/86 via-neutral-950/55 to-neutral-950/20 md:bg-linear-to-r md:from-neutral-950/82 md:via-neutral-950/48 md:to-neutral-950/12" />
           <div className="absolute inset-0 flex flex-col justify-end p-4 sm:p-8 md:max-w-[min(52%,26rem)] md:justify-center md:pb-14 md:pl-10 lg:pl-12">
             <motion.p
-              className="mb-2 text-[10px] font-medium tracking-[0.32em] text-white/70 sm:mb-3 sm:text-[11px]"
+              className="mb-2 text-base font-bold  text-white/80 sm:mb-3 sm:text-[11px]"
               initial={reduce ? false : { opacity: 0, y: 12 }}
               animate={reduce ? undefined : { opacity: 1, y: 0 }}
               transition={{ delay: 0.12, duration: 0.5 }}
             >
-              #LS2026 · #ASSOKE2026
+              #SL2026 · #ASSOKE2026
             </motion.p>
             <motion.h1
               className={cn(
@@ -58,7 +58,7 @@ export function HeroPortrait({ serifClassName }: HeroPortraitProps) {
               animate={reduce ? undefined : { opacity: 1, y: 0 }}
               transition={{ delay: 0.26, duration: 0.55 }}
             >
-              Parce que chaque histoire d&apos;amour est unique, voici la nôtre.
+              Deux cœurs guidés, une histoire écrite par Dieu.
             </motion.p>
           </div>
         </AspectRatio>

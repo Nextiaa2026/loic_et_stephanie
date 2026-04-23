@@ -41,15 +41,15 @@ export function EventReligious({ serifClassName }: EventReligiousProps) {
         <div className="mt-6 flex flex-col items-center gap-1.5 text-sm italic text-muted-foreground sm:text-base">
           <p className="inline-flex items-center gap-2">
             <CalendarDays className="size-3.5 shrink-0" aria-hidden />
-            <span>Samedi 02 août 2026</span>
+            <span>Vendredi 07 août 2026</span>
           </p>
           <a
             href="https://www.google.com/maps/search/?api=1&query=Cathedrale+Notre+dame+des+victoires+Poste+centrale+Yaounde"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 underline decoration-primary/40 underline-offset-4 transition-colors hover:text-foreground"
+            className="inline-flex w-full max-w-136 items-start justify-center gap-2 text-center underline decoration-primary/40 underline-offset-4 transition-colors hover:text-foreground"
           >
-            <MapPin className="size-3.5 shrink-0" aria-hidden />
+            <MapPin className="mt-0.5 size-3.5 shrink-0" aria-hidden />
             <span>Cathédrale Notre dame des victoires, Poste centrale, Yaoundé</span>
           </a>
         </div>

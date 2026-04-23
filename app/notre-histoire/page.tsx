@@ -42,26 +42,73 @@ const timelineEvents: TimelineEvent[] = [
     date: "Février 2023",
     title: "L'officialisation",
     paragraphs: [
-      "Un mois après notre rencontre, notre lien était devenu indéniable.",
-      "Nous nous retrouvions chaque semaine avec enthousiasme, heureux de prolonger ces échanges si simples, si naturels.",
-      "Cette période fut aussi délicate pour Stéphanie, traversant un deuil familial. Nos projets furent reportés plusieurs fois.",
-      "Pourtant, Loïc n'a pas renoncé. Avec patience et tendresse, il a insisté jusqu'au jour J.",
-      "Finalement, portée par cette bienveillance, Stéphanie a décidé de le retrouver. Ce soir-là, tout a changé.",
-      "Dans une ambiance intime et sincère, Loïc a demandé à Stéphanie de devenir sa copine. Une réponse évidente : oui.",
-      "À partir de là, tout s'est naturellement tissé entre nous, jusque dans cette phrase glissée au 1er janvier 2024 : « Cette année, je viendrai voir ton père. »",
+      "Un mois après leur première rencontre, quelque chose avait déjà changé entre eux.",
+      "Sans bruit, sans effort, leur lien s’était tissé avec une évidence douce, comme si chaque week‑end devenait le prolongement naturel du précédent. Ils se retrouvaient, parlent de tout et de rien, découvrant à quel point la présence de l’autre apportait un équilibre nouveau.",
+      "Loïc, sensible et attentif, avait imaginé vivre un moment particulier avec Stéphanie pendant la période de Noël.",
+      "Mais cette fin d’année fut rythmée par les voyages : Stéphanie rejoignait sa famille, partageait du temps avec les siens, et les dates ne s’accordaient jamais vraiment.",
+      "Chaque tentative se voyait reportée… puis reportée encore.",
+      "Pourtant, Loïc n’a pas abandonné.",
+      "Jamais.",
+      "Avec cette patience qui le caractérise, il insistait doucement, mais avec conviction : prépare‑toi, je viendrai te chercher, juste toi et moi, pour une soirée simple, mais importante.",
+      "Et un soir, portée par la sincérité de ses intentions et par la constance de ses attentions, Stéphanie a dit oui à cette invitation qu’elle n’avait pas encore pu honorer.",
+      "Ils ont dîné, parlé longtemps, comme à leur habitude…",
+      "Puis, en reprenant la route, un silence doux s’est installé.",
+      "Le genre de silence qui précède les moments qui comptent.",
+      "C’est là, dans cette atmosphère calme et vraie, que Loïc s’est tourné vers elle.",
+      "Pas de discours préparé, pas d’artifice, seulement la vérité de son cœur : il voulait qu’elle devienne sa copine.",
+      "La réponse de Stéphanie n’a pas eu besoin de réflexion.",
+      "C’était un oui simple, clair, naturel.",
+      "Un oui qui portait déjà tout ce qui allait suivre.",
+      "Dès cet instant, quelque chose s’est aligné entre eux.",
+      "Leurs valeurs, leurs visions, leurs projets de vie… tout semblait se répondre avec harmonie.",
+      "Et chaque jour, chacun devenait davantage cette pièce qui manquait à l’autre.",
+      "Très vite, leur entourage a perçu cette douceur nouvelle, cette complicité qui ne s’explique pas mais qui se voit, se sent, se devine.",
+      "Et Stéphanie garde en mémoire ces journées qui ont suivi, où Loïc, avec l’assurance tranquille de quelqu’un qui sait où il va, lui répétait en souriant : « Cette année, tu deviendras Madame Ass. »",
+      "Une phrase simple…",
+      "Une promesse silencieuse…",
+      "Et déjà, la porte ouverte vers la suite de leur histoire.",
     ],
-    quote: "« Même si ce n'est que pour dix minutes, viens. »",
+    quote: "« Cette année, tu deviendras Madame Ass. »",
   },
   {
     date: "7 mars 2026",
-    title: "La demande",
+    title: "La demande en mariage",
     paragraphs: [
-      "Le 7 mars 2026 était déjà une journée symbolique : la fin de cinq années d'études pour Stéphanie, marquées par des efforts constants, des nuits blanches, des réussites, des doutes… et une immense fierté.",
-      "Mais pour Loïc, cette journée allait porter une autre signification. En coulisses, il avait monté une véritable petite mission avec leurs proches.",
-      "Quelques jours avant la cérémonie, ses amies insistaient pour qu'elle soit magnifique, sans révéler le secret.",
-      "Le soir venu, Stéphanie pensait rejoindre un petit dîner entre amis pour célébrer son diplôme… mais dès l'entrée, elle a compris que ce moment était bien plus grand.",
-      "Un décor préparé avec soin, des visages familiers, une émotion intense, et au centre… Loïc.",
-      "Dans ce moment suspendu, il a demandé à Stéphanie de devenir sa fiancée. La réponse a coulé d'elle-même : un oui rempli de joie, de gratitude et de lumière.",
+      "Le 07 mars 2026 était déjà une journée symbolique : la fin de cinq années d’études, marquées par des efforts constants, des nuits blanches, des réussites, des doutes… et une fierté immense.",
+      "Stéphanie recevait enfin son diplôme.",
+      "Mais pour Loïc, cette journée allait porter une autre signification.",
+      "En coulisses, il avait monté une véritable petite mission.",
+      "Une mission qui impliquait : Ulrich, Clide, Aubin, Dimitri, et les deux amies proches de Stéphanie, Angela et Stéphanie.",
+      "Tous étaient dans la confidence.",
+      "Tous attendaient le moment précis.",
+      "Sauf… Stéphanie.",
+      "Quelques jours avant la cérémonie, Angela et Stéphanie insistaient : « Tu dois être magnifique, c’est un grand jour ! Coiffure, ongles, tenue… fais‑toi belle. »",
+      "Stéphanie s’exécutait, touchée par l’attention de ses amies.",
+      "(Elle ne savait pas encore que leur insistance cachait un secret bien plus grand que la remise de diplôme.)",
+      "Pendant ce temps, Loïc, étrangement indisponible, avait trouvé l’excuse la moins crédible du monde : « Je suis à Leroy Merlin pour acheter de la viande. »",
+      "(Encore aujourd’hui, on ne sait pas comment Stéphanie n’a pas compris que quelque chose se tramait…)",
+      "Puis vint le soir.",
+      "Nous avons franchi la porte du lieu de réception, main dans la main.",
+      "Stéphanie pensait rejoindre un petit dîner entre amis pour célébrer ce diplôme.",
+      "Mais dès l’instant où nous sommes entrés… tout s’est arrêté.",
+      "Ce n’était pas un dîner intime.",
+      "Ce n’était pas une simple célébration de fin d’études.",
+      "C’était le début de nos fiançailles.",
+      "Un décor préparé avec soin.",
+      "Des visages familiers.",
+      "Des sourires, des regards complices, des émotions contenues.",
+      "Et au centre… Loïc.",
+      "Stéphanie a senti son cœur battre plus vite.",
+      "Les larmes lui sont montées aux yeux avant même de comprendre ce qui se passait.",
+      "C’était beau, intense, surprenant… irréel.",
+      "Loïc s’est avancé.",
+      "Avec calme. Avec certitude.",
+      "Avec amour.",
+      "Et dans ce moment suspendu, où le monde semblait tenir son souffle, il a demandé à Stéphanie de devenir sa fiancée.",
+      "La réponse a coulé d’elle‑même.",
+      "Un oui rempli de joie, de gratitude, de lumière.",
+      "Un oui qui n’était pas seulement une réponse…",
+      "mais une promesse pour la vie.",
     ],
     quote: "C'était le début de nos fiançailles.",
   },
@@ -75,7 +122,7 @@ export default function NotreHistoirePage() {
         <main>
           <PageHeroVertical
             title="Notre Histoire"
-            imageSrc="/jl_2026_main_hero.jpeg"
+            imageSrc="/jl_2026_08.jpeg"
             serifClassName={playfair.className}
           />
 
@@ -120,7 +167,7 @@ export default function NotreHistoirePage() {
               <h2
                 className={`${playfair.className} mb-4 text-xl font-semibold not-italic tracking-tight text-foreground sm:text-2xl`}
               >
-                Nouveau chap
+                Un nouveau chap
               </h2>
               <p>
                 Aujourd&apos;hui, nous avançons ensemble, confiants et
@@ -154,9 +201,6 @@ export default function NotreHistoirePage() {
               </p>
               <p className="font-medium text-foreground not-italic">
                 Bienvenue dans ce que Dieu bâtit à travers nous.
-              </p>
-              <p className="mt-6 text-sm font-medium tracking-wide text-muted-foreground not-italic">
-                #LS2026 · #ASSOKE2026
               </p>
             </section>
           </article>

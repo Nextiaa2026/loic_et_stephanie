@@ -7,17 +7,19 @@ import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
-export type GalleryImageItem = { src: string; alt: string };
+export type GalleryMediaItem =
+  | { type: "image"; src: string; alt: string }
+  | { type: "video"; src: string; alt: string; poster?: string };
 
 type GalleryLightboxProps = {
-  images: GalleryImageItem[];
+  items: GalleryMediaItem[];
   open: boolean;
   startIndex: number;
   onClose: () => void;
 };
 
 export function GalleryLightbox({
-  images,
+  items,
   open,
   startIndex,
   onClose,
@@ -26,17 +28,17 @@ export function GalleryLightbox({
 
   useEffect(() => {
     if (open) {
-      setIndex(Math.min(Math.max(0, startIndex), images.length - 1));
+      setIndex(Math.min(Math.max(0, startIndex), items.length - 1));
     }
-  }, [open, startIndex, images.length]);
+  }, [open, startIndex, items.length]);
 
   const goPrev = useCallback(() => {
-    setIndex((i) => (i - 1 + images.length) % images.length);
-  }, [images.length]);
+    setIndex((i) => (i - 1 + items.length) % items.length);
+  }, [items.length]);
 
   const goNext = useCallback(() => {
-    setIndex((i) => (i + 1) % images.length);
-  }, [images.length]);
+    setIndex((i) => (i + 1) % items.length);
+  }, [items.length]);
 
   useEffect(() => {
     if (!open) return;
@@ -58,15 +60,15 @@ export function GalleryLightbox({
     };
   }, [open]);
 
-  if (!open || images.length === 0) return null;
+  if (!open || items.length === 0) return null;
 
-  const current = images[index];
+  const current = items[index];
 
   return (
     <div
       role="dialog"
       aria-modal="true"
-      aria-label="Agrandissement de la photo"
+      aria-label="Agrandissement du média"
       className="fixed inset-0 z-100"
     >
       <button
@@ -96,14 +98,26 @@ export function GalleryLightbox({
               "pointer-events-auto relative h-[min(82dvh,calc(100dvh-7rem))] w-full max-w-6xl",
             )}
           >
-            <Image
-              src={current.src}
-              alt={current.alt}
-              fill
-              className="object-contain"
-              sizes="100vw"
-              priority
-            />
+            {current.type === "image" ? (
+              <Image
+                src={current.src}
+                alt={current.alt}
+                fill
+                className="object-contain"
+                sizes="100vw"
+                priority
+              />
+            ) : (
+              <video
+                key={current.src}
+                src={current.src}
+                poster={current.poster}
+                controls
+                autoPlay
+                playsInline
+                className="h-full w-full rounded-xl bg-black object-contain"
+              />
+            )}
           </div>
 
           <Button
@@ -115,7 +129,7 @@ export function GalleryLightbox({
               e.stopPropagation();
               goPrev();
             }}
-            aria-label="Photo précédente"
+            aria-label="Média précédent"
           >
             <ChevronLeft className="size-7 sm:size-8" />
           </Button>
@@ -128,14 +142,14 @@ export function GalleryLightbox({
               e.stopPropagation();
               goNext();
             }}
-            aria-label="Photo suivante"
+            aria-label="Média suivant"
           >
             <ChevronRight className="size-7 sm:size-8" />
           </Button>
         </div>
 
         <div className="pointer-events-auto absolute bottom-4 left-0 right-0 text-center text-sm tabular-nums text-white/75">
-          {index + 1} / {images.length}
+          {index + 1} / {items.length}
         </div>
       </div>
     </div>

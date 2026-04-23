@@ -43,7 +43,8 @@ export function WelcomeSplit({ serifClassName }: WelcomeSplitProps) {
           )}
           {...item(0.04)}
         >
-          Découvrez Ici Les Étapes De Notre Aventure
+          C’est avec une immense joie que nous partageons avec vous un morceau
+          de ce que Dieu bâtit en nous.{" "}
         </motion.h2>
       </div>
       <div className="flex flex-col gap-4 pt-0.5 sm:gap-5 sm:pt-1">
@@ -51,33 +52,31 @@ export function WelcomeSplit({ serifClassName }: WelcomeSplitProps) {
           className="text-[15px] leading-[1.7] text-muted-foreground sm:text-base sm:leading-[1.75]"
           {...item(0.06)}
         >
-          Bienvenue dans notre univers ! Nous sommes ravis de partager avec vous
-          les moments forts de notre histoire, de notre première rencontre
-          jusqu&apos;à la grande demande en mariage qui a marqué le début de
-          cette nouvelle vie à deux.
+          Chaque rencontre, chaque sourire, chaque saison nous a conduits vers
+          ce moment précieux que nous nous apprêtons à vivre avec vous.
         </motion.p>
         <motion.p
           className="text-[15px] leading-[1.7] text-muted-foreground sm:text-base sm:leading-[1.75]"
           {...item(0.12)}
         >
-          Chaque étape de notre parcours a été rendue encore plus belle grâce au
-          soutien de nos proches. C&apos;est avec beaucoup d&apos;amour que nous
-          vous invitons à célébrer notre union et à être les témoins de notre
-          engagement.
+          Votre présence, votre affection et vos prières donneront encore plus
+          de sens à ces jours si spéciaux.
         </motion.p>
         <motion.p
           className="text-[15px] leading-[1.7] text-muted-foreground sm:text-base sm:leading-[1.75]"
           {...item(0.18)}
         >
-          Préparez-vous à vivre avec nous un mariage inoubliable, où tradition,
-          élégance et joie seront au rendez-vous pour créer des souvenirs
-          éternels.
+          Merci de marcher avec nous, d’être témoins de notre amour et de
+          célébrer ce nouveau chapitre qui s’ouvre devant nous.
+          <br />
+          Bienvenue dans notre bonheur. <br />
+          Bienvenue dans notre histoire.
         </motion.p>
         <motion.p
-          className="text-sm font-medium tracking-wide text-muted-foreground"
+          className="text-base font-bold tracking-wide text-muted-foreground"
           {...item(0.22)}
         >
-          #SL2026 · #assoke2026
+          #SL2026 · #ASSOKE2026
         </motion.p>
         <motion.div id="rsvp" {...item(0.26)}>
           <Button

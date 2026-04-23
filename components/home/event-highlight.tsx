@@ -41,7 +41,7 @@ export function EventHighlight({ serifClassName }: EventHighlightProps) {
         <div className="mt-6 flex flex-col items-center gap-1.5 text-sm italic text-muted-foreground sm:text-base">
           <p className="inline-flex items-center gap-2">
             <CalendarDays className="size-3.5 shrink-0" aria-hidden />
-            <span>Samedi 26 juillet 2026</span>
+            <span>Mercredi 05 août 2026</span>
           </p>
           <a
             href="https://www.google.com/maps/search/?api=1&query=Mfou+La+Boulangerie+du+Peuple"

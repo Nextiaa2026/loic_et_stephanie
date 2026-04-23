@@ -23,7 +23,7 @@ const PINTEREST_DRESS_CODE_URL = "https://pin.it/fE30hrBiY";
 const dressCodes = [
   {
     event: "Mariage Traditionnel",
-    date: "26 juillet 2026",
+    date: "05 août 2026",
     theme: "Tenue traditionnelle",
     color: "Blanc, noir, rose, orangé",
     description:
@@ -39,7 +39,7 @@ const dressCodes = [
   },
   {
     event: "Mariage Religieux",
-    date: "02 août 2026",
+    date: "07 août 2026",
     theme: "Élégance classique",
     color: "Blanc, noir, rose, orangé",
     description:
