@@ -2,6 +2,7 @@ import { CalendarDays, MapPin } from "lucide-react";
 import Image from "next/image";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Separator } from "@/components/ui/separator";
+import { WEDDING_DATES, WEDDING_LOCATIONS } from "@/lib/site-config";
 import { cn } from "@/lib/utils";
 import { Reveal } from "./reveal";
 
@@ -32,7 +33,7 @@ export function EventHighlight({ serifClassName }: EventHighlightProps) {
         <h2
           className={cn(
             serifClassName,
-            "text-2xl font-semibold tracking-tight text-foreground sm:text-3xl",
+            "text-2xl font-semibold tracking-tight text-foreground sm:text-3xl"
           )}
         >
           Mariage Traditionnel
@@ -41,25 +42,17 @@ export function EventHighlight({ serifClassName }: EventHighlightProps) {
         <div className="mt-6 flex flex-col items-center gap-1.5 text-sm italic text-muted-foreground sm:text-base">
           <p className="inline-flex items-center gap-2">
             <CalendarDays className="size-3.5 shrink-0" aria-hidden />
-            <span>Mercredi 05 août 2026</span>
+            <span>{WEDDING_DATES.traditional.display}</span>
           </p>
           <a
-            href="https://www.google.com/maps/search/?api=1&query=Mfou+La+Boulangerie+du+Peuple"
+            href={`https://www.google.com/maps/search/?api=1&query=${WEDDING_LOCATIONS.traditionalMapsQuery}`}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 underline decoration-primary/40 underline-offset-4 transition-colors hover:text-foreground"
           >
             <MapPin className="size-3.5 shrink-0" aria-hidden />
-            <span>Mfou — La Boulangerie du Peuple</span>
+            <span>{WEDDING_LOCATIONS.traditional}</span>
           </a>
-        </div>
-        <div className="mx-auto mt-6 max-w-xl space-y-1 text-sm leading-relaxed text-muted-foreground sm:text-base">
-          <p>
-            Un rendez-vous avec nos origines, placé sous le signe du respect des
-            coutumes. Ce moment unique réunira nos familles autour de valeurs
-            essentielles, dans une atmosphère de partage, de traditions et
-            d’émotions sincères.
-          </p>
         </div>
       </Reveal>
     </section>

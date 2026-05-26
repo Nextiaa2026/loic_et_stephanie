@@ -1,3 +1,4 @@
+import { CivilEvent } from "./civil-event";
 import { EventHighlight } from "./event-highlight";
 import { EventReligious } from "./event-religious";
 import { GallerySection } from "./gallery-section";
@@ -11,6 +12,7 @@ import { SiteFooter } from "./site-footer";
 import { SiteHeader } from "./site-header";
 import { StoryWithMedia } from "./story-with-media";
 import { TestimonialsSection } from "./testimonials-section";
+import { TraditionalProgramTimeline } from "./traditional-program-timeline";
 import { WelcomeSplit } from "./welcome-split";
 
 type HomeViewProps = {
@@ -27,12 +29,14 @@ export function HomeView({ serifClassName }: HomeViewProps) {
           <WelcomeSplit serifClassName={serifClassName} />
           <HomeCountdown serifClassName={serifClassName} />
           <EventHighlight serifClassName={serifClassName} />
+          <CivilEvent serifClassName={serifClassName} />
           <EventReligious serifClassName={serifClassName} />
           <StoryWithMedia serifClassName={serifClassName} />
           <GallerySection serifClassName={serifClassName} />
           <PracticalInfo serifClassName={serifClassName} />
           <TestimonialsSection serifClassName={serifClassName} />
           <InviteHero serifClassName={serifClassName} />
+          <TraditionalProgramTimeline serifClassName={serifClassName} />
         </main>
         <SiteFooter />
       </PageContainer>

@@ -2,12 +2,13 @@
 
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
+import { WEDDING_DATES, WEDDING_LOCATIONS } from "@/lib/site-config";
 import { cn } from "@/lib/utils";
 
 const faqs = [
   {
     q: "Quand et où aura lieu le mariage ?",
-    a: "Le mariage traditionnel aura lieu le mercredi 05 août 2026 à Mfou, La Boulangerie du Peuple. Le mariage religieux se tiendra le vendredi 07 août 2026 à la Cathédrale Poste Central. Le mariage civil se déroulera à Limbes (date à confirmer).",
+    a: `Le mariage traditionnel aura lieu le ${WEDDING_DATES.traditional.label} à ${WEDDING_LOCATIONS.traditional}. Le mariage religieux se tiendra le ${WEDDING_DATES.religious.label} à ${WEDDING_LOCATIONS.religious}. Le mariage civil se déroulera le ${WEDDING_DATES.civil.label} à ${WEDDING_LOCATIONS.civil}.`,
   },
   {
     q: "Comment confirmer ma présence ?",

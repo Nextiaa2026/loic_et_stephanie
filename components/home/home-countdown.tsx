@@ -3,6 +3,7 @@
 import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { useEffect, useMemo, useState } from "react";
 
+import { WEDDING_DATES } from "@/lib/site-config";
 import { cn } from "@/lib/utils";
 
 type TimeLeft = {
@@ -107,7 +108,10 @@ type HomeCountdownProps = {
 
 export function HomeCountdown({ serifClassName }: HomeCountdownProps) {
   const reduce = useReducedMotion();
-  const target = useMemo(() => new Date("2026-07-26T14:00:00"), []);
+  const target = useMemo(
+    () => new Date(WEDDING_DATES.traditional.countdownIso),
+    [],
+  );
   const [left, setLeft] = useState<TimeLeft | null>(null);
 
   useEffect(() => {

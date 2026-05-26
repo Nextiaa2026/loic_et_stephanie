@@ -2,17 +2,21 @@ import { CalendarDays, MapPin } from "lucide-react";
 import Image from "next/image";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Separator } from "@/components/ui/separator";
-import { WEDDING_DATES, WEDDING_LOCATIONS } from "@/lib/site-config";
+import {
+  WEDDING_DATES,
+  WEDDING_IMAGES,
+  WEDDING_LOCATIONS,
+} from "@/lib/site-config";
 import { cn } from "@/lib/utils";
 import { Reveal } from "./reveal";
 
-type EventReligiousProps = {
+type CivilEventProps = {
   serifClassName: string;
 };
 
-export function EventReligious({ serifClassName }: EventReligiousProps) {
+export function CivilEvent({ serifClassName }: CivilEventProps) {
   return (
-    <section id="mariage-religieux" className="w-full py-14 sm:py-20">
+    <section id="ceremonie" className="w-full py-14 sm:py-20">
       <Reveal>
         <figure className="mx-auto w-full max-w-2xl">
           <AspectRatio
@@ -20,8 +24,8 @@ export function EventReligious({ serifClassName }: EventReligiousProps) {
             className="overflow-hidden rounded-2xl bg-muted"
           >
             <Image
-              src="/jl_2026_02.jpeg"
-              alt="Mariage religieux"
+              src={WEDDING_IMAGES.civil}
+              alt="Mariage civil"
               fill
               className="object-cover"
             />
@@ -36,29 +40,28 @@ export function EventReligious({ serifClassName }: EventReligiousProps) {
             "text-2xl font-semibold tracking-tight text-foreground sm:text-3xl"
           )}
         >
-          Mariage Religieux
+          Mariage Civil
         </h2>
         <Separator className="mx-auto mt-4 h-px max-w-40 bg-border" />
         <div className="mt-6 flex flex-col items-center gap-1.5 text-sm italic text-muted-foreground sm:text-base">
           <p className="inline-flex items-center gap-2">
             <CalendarDays className="size-3.5 shrink-0" aria-hidden />
-            <span>{WEDDING_DATES.religious.display}</span>
+            <span>{WEDDING_DATES.civil.display}</span>
           </p>
           <a
-            href={`https://www.google.com/maps/search/?api=1&query=${WEDDING_LOCATIONS.religiousMapsQuery}`}
+            href={`https://www.google.com/maps/search/?api=1&query=${WEDDING_LOCATIONS.civilMapsQuery}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex w-full max-w-136 items-start justify-center gap-2 text-center underline decoration-primary/40 underline-offset-4 transition-colors hover:text-foreground"
+            className="inline-flex items-center gap-2 underline decoration-primary/40 underline-offset-4 transition-colors hover:text-foreground"
           >
-            <MapPin className="mt-0.5 size-3.5 shrink-0" aria-hidden />
-            <span>{WEDDING_LOCATIONS.religious}</span>
+            <MapPin className="size-3.5 shrink-0" aria-hidden />
+            <span>{WEDDING_LOCATIONS.civil}</span>
           </a>
         </div>
         <div className="mx-auto mt-6 max-w-xl space-y-1 text-sm leading-relaxed text-muted-foreground sm:text-base">
           <p>
-            Dans la foi et la présence divine, nous unirons nos vies par un
-            engagement sacré. Cette cérémonie solennelle célèbrera un amour
-            porté par la grâce et la spiritualité.
+            L&apos;officialisation de notre union devant la loi. Les détails
+            (horaire précis) vous seront communiqués en temps utile.
           </p>
         </div>
       </Reveal>

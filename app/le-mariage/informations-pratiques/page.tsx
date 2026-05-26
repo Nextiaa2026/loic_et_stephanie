@@ -11,7 +11,11 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { SITE_CONTACT_EMAIL } from "@/lib/site-config";
+import {
+  SITE_CONTACT_EMAIL,
+  WEDDING_DATES,
+  WEDDING_LOCATIONS,
+} from "@/lib/site-config";
 
 const playfair = Cormorant_Garamond({
   subsets: ["latin"],
@@ -56,8 +60,8 @@ const infoSections: {
     icon: MapPin,
     title: "Lieux des cérémonies",
     items: [
-      "Mariage traditionnel : Mfou — La Boulangerie du Peuple.",
-      "Mariage religieux : Cathédrale Poste Central.",
+      `Mariage traditionnel : ${WEDDING_DATES.traditional.label} — ${WEDDING_LOCATIONS.traditional}.`,
+      `Mariage religieux : ${WEDDING_DATES.religious.label} — ${WEDDING_LOCATIONS.religious}.`,
       "Des cartes et itinéraires détaillés seront envoyés par email avant l’événement.",
     ],
   },
@@ -66,8 +70,8 @@ const infoSections: {
     title: "Mariage civil",
     items: [
       "Le mariage civil officialise notre union devant l’autorité de l’état civil : c’est l’acte légal qui nous reconnaît comme époux et épouse.",
-      "Lieu : Limbes.",
-      "La date et l’horaire précis vous seront communiqués dès qu’ils seront fixés. Pensez à vous munir d’une pièce d’identité valide, comme pour toute cérémonie civile.",
+      `Date : ${WEDDING_DATES.civil.label}. Lieu : ${WEDDING_LOCATIONS.civil}.`,
+      "L’horaire précis vous sera communiqué en temps utile. Pensez à vous munir d’une pièce d’identité valide, comme pour toute cérémonie civile.",
     ],
   },
   {

@@ -25,17 +25,40 @@ type TimelineEvent = {
 
 const timelineEvents: TimelineEvent[] = [
   {
-    date: "6 janvier 2023",
+    date: "Septembre 2024",
     title: "La rencontre",
     paragraphs: [
-      "Parfois, les plus belles histoires commencent lorsqu'on s'y attend le moins.",
-      "Notre rencontre, nous la devons à deux précieux complices : Marie et David.",
-      "Tout a commencé lorsque Marie, la sœur de Loïc, lui a confié que Stéphanie venait tout juste de rentrer au Cameroun et qu'elle était persuadée qu'ils formeraient un « match parfait ».",
-      "Curieux et intrigué, c'est après cette discussion que Loïc a discrètement suivi Stéphanie sur Instagram.",
-      "De son côté, Stéphanie, lorsqu'elle entendit son petit frère David lui dire qu'il avait « quelqu'un à lui présenter », n'y prêta pas vraiment attention. « Comment mon petit frère pourrait-il me trouver quelqu'un ? »",
-      "Finalement, sous l'insistance douce de David, Stéphanie accepta de répondre.",
-      "Nous nous sommes retrouvés pour un dimanche paisible, de 14h à 20h, portés par une conversation fluide et naturelle.",
-      "Très vite, de nombreux points communs ont émergé : la foi, la famille, les voyages, le sens de l'humour… et cette certitude fragile qu'un nouveau chapitre commençait.",
+      "Parfois, les plus belles histoires prennent naissance là où l’on s’y attend le moins : au détour d’un voyage, d’une visite, d’un simple regard. La nôtre a commencé grâce à trois femmes au cœur généreux : Mama Edith, maman de Loïc, et ses sœurs Mama Ursula et Mama Virginie, dont la bienveillance a, sans le savoir, ouvert la porte à une rencontre qui allait tout changer.",
+      "En septembre 2024, alors qu’elle se prépare à voyager en France pour quelques semaines, Mama Edith apprend que Stéphanie, qu’elle connaît depuis de longues années par les liens profonds unissant leurs familles, vit dans la même ville que Loïc. Sans imaginer la suite, elle décide qu’elle profitera de son séjour pour revoir Stéphanie, simplement heureuse de renouer après plusieurs années.",
+      "Arrivée en France le 21 septembre 2024, elle prend contact avec Stéphanie pour organiser une visite. Après quelques ajustements de planning, la rencontre est fixée au 28 septembre 2024, chez Mama Virginie, à Pavillons-sous-Bois.",
+      "Ce matin‑là, Stéphanie arrive avec la joie sincère de revoir Mama Edith et Mama Virginie. Elles échangent, rient, se remémorent leurs souvenirs… puis, sans prévenir, Loïc fait son entrée dans la cuisine.",
+      "Le temps semble s’arrêter.",
+      "Leurs yeux se croisent.",
+      "Quelque chose d’inattendu, de doux, d’inexplicable se crée aussitôt.",
+      "Stéphanie sourit — ce sourire lumineux, naturel, presque désarmant.",
+      "Et Loïc… en est immédiatement touché. Presque intimidé.",
+      "Il ne s’y attendait pas. Elle non plus.",
+      "Ils se saluent, échangent quelques phrases, mais leurs regards en disent bien plus que leurs mots. Les mamans observent la scène avec une tendresse discrète : elles devinent, au fond d’elles, que quelque chose vient de naître.",
+      "La conversation s’installe entre eux avec une facilité surprenante. Ils parlent, se découvrent, se comprennent, comme si leurs âmes rattrapaient un rendez-vous longtemps prévu. Si bien que les mamans finissent par les laisser continuer leurs échanges en tête‑à‑tête, témoins discrètes de cette harmonie qui s’installe naturellement.",
+      "Cette première rencontre laissait déjà entrevoir une évidence.",
+      "Quelques jours plus tard, Loïc, marqué par cette impression unique, propose à Stéphanie un premier rendez‑vous. Elle hésite brièvement, mais son amie Angela l’encourage tendrement à écouter son cœur.",
+      "Le 9 octobre 2024, ils se retrouvent. Une ambiance paisible, simple, authentique. Et une fois encore, le temps s’efface.",
+      "De 17h à 23h, ils parlent sans interruption : vie, projets, travail, convictions… et rires partagés. Tout coule, naturellement.",
+      "Très vite, des similitudes apparaissent :",
+      "une passion commune pour l’informatique, des métiers proches, des ambitions alignées, le même mois d’anniversaire… mais surtout cette sensation rare qu’ils se comprennent profondément, sans effort.",
+      "Ce soir‑là, chacun repart avec une émotion nouvelle.",
+      "Stéphanie confie à Angela :",
+      "« Je crois avoir rencontré mon futur mari. »",
+      "Et Loïc, sûr de lui, affirme :",
+      "« Cette femme, je veux la garder près de moi toute ma vie. »",
+      "Leurs cœurs avaient parlé avant leurs mots.",
+      "Quand Mama Edith rentre au Cameroun le 18 octobre 2024, elle dit simplement, avec ce sourire qu’ont les mamans lorsqu’elles savent sans qu’on leur dise :",
+      "« Je suis venue en France pour un voyage… et je crois que Dieu m’a montré quelque chose de précieux. »",
+      "Elle n’a rien forcé, rien imposé.",
+      "Elle a simplement été le trait d’union que le destin attendait.",
+      "C’est ainsi qu’a commencé notre histoire :",
+      "Dans la simplicité, la douceur, la surprise… et la conviction que lorsque Dieu réunit deux vies, tout s’aligne avec une évidence paisible.",
+      "Et aujourd’hui, nous nous apprêtons à écrire ensemble un nouveau chapitre, guidés par l’amour, la foi et la gratitude.",
     ],
   },
   {
@@ -130,7 +153,7 @@ export default function NotreHistoirePage() {
           <article className="mx-auto max-w-4xl px-2 pb-16 pt-4 sm:px-0">
             <div className="relative space-y-8 sm:space-y-10">
               <div className="absolute top-0 bottom-0 left-4 hidden w-px bg-border sm:block" />
-              {timelineEvents.map((event) => (
+              {timelineEvents.map(event => (
                 <section
                   key={event.title}
                   className="relative grid gap-3 sm:grid-cols-[120px_1fr] sm:gap-6"
@@ -148,7 +171,7 @@ export default function NotreHistoirePage() {
                       {event.title}
                     </h2>
                     <div className="space-y-4 text-base leading-[1.8] text-muted-foreground italic sm:text-[17px]">
-                      {event.paragraphs.map((paragraph) => (
+                      {event.paragraphs.map(paragraph => (
                         <p key={paragraph}>{paragraph}</p>
                       ))}
                     </div>
