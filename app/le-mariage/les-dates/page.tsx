@@ -22,16 +22,14 @@ export default function LesDatesPage() {
         <main>
           <PageHeroVertical
             title="Les Dates"
-            description="Trois temps forts pour célébrer notre union : tradition, foi et civil. Voici les informations à retenir."
+            description="Trois temps forts pour célébrer notre union : tradition, civil et religieux. Voici les informations à retenir."
             imageSrc="/jl_2026_04.jpeg"
             serifClassName={playfair.className}
           />
 
-          <CivilEvent serifClassName={playfair.className} />
-
-          <EventReligious serifClassName={playfair.className} />
-
           <EventHighlight serifClassName={playfair.className} />
+          <CivilEvent serifClassName={playfair.className} />
+          <EventReligious serifClassName={playfair.className} />
 
           <TraditionalProgramTimeline serifClassName={playfair.className} />
 
