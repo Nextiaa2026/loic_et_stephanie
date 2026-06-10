@@ -6,7 +6,7 @@ export const WEDDING_DATES = {
   traditional: {
     label: "Mercredi 05 août 2026",
     time: "15h30",
-    display: "Mercredi 5 août 2026 à 15h30",
+    display: "Mercredi 05 août 2026 à 15h30",
     short: "05 août 2026",
     countdownIso: "2026-08-05T13:30:00",
   },
