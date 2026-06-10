@@ -51,7 +51,7 @@ const galleryItems = [
   },
   {
     type: "video" as const,
-    src: "/c6836ad9-fad1-4136-b6fd-bce877ac155e.mov",
+    src: "/vid_01.mp4",
     alt: "Vidéo — Moment de notre histoire",
     className: "sm:row-span-2",
   },
