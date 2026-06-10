@@ -17,7 +17,7 @@ export type DressCodeEvent = {
   inspiration?: DressCodeInspiration;
 };
 
-export const PINTEREST_DRESS_CODE_URL = "https://pin.it/fE30hrBiY";
+export const PINTEREST_DRESS_CODE_URL = "https://pin.it/5pjzme7aj";
 
 /** Contenu dress code — libellés tels que fournis par les mariés. */
 export const DRESS_CODE_EVENTS: DressCodeEvent[] = [
