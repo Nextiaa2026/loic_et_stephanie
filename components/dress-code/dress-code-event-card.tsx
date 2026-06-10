@@ -44,9 +44,9 @@ export function DressCodeEventCard({
   return (
     <Card className="rounded-2xl border-border/60 shadow-none">
       <CardHeader className="px-6 pt-8 sm:px-10 sm:pt-10">
-        {/* <p className="text-xs font-semibold uppercase tracking-[0.3em] text-primary">
+        <p className="text-xs font-semibold uppercase tracking-[0.3em] text-primary">
           {dressCode.eventLabel}
-        </p> */}
+        </p>
         <CardTitle
           className={`${serifClassName} mt-2 text-2xl font-semibold tracking-tight sm:text-3xl`}
         >

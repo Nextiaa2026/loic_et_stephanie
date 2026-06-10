@@ -22,7 +22,7 @@ export const PINTEREST_DRESS_CODE_URL = "https://pin.it/5pjzme7aj";
 /** Contenu dress code — libellés tels que fournis par les mariés. */
 export const DRESS_CODE_EVENTS: DressCodeEvent[] = [
   {
-    eventLabel: "Le Mariage Traditionnel - 01 Aout 2026 à Nkolafamba",
+    eventLabel: "",
     ambiance: "✨ Splendeur Royale & Traditionnelle",
     intro:
       "Pour notre mariage traditionnel, nous souhaitons célébrer nos cultures dans un esprit raffiné et chaleureux. Cette journée sera l’occasion de mettre à l’honneur la beauté de nos traditions, tout en apportant une touche de modernité et d’élégance. Nous vous invitons donc à privilégier une tenue traditionnelle revisitée avec finesse",
