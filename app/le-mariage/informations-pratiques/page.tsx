@@ -59,8 +59,6 @@ const infoSections: {
       `Mariage traditionnel : ${WEDDING_DATES.traditional.label} — ${WEDDING_LOCATIONS.traditional}.`,
       `Mariage religieux : ${WEDDING_DATES.religious.label} — ${WEDDING_LOCATIONS.religious}.`,
       "Mariage civil :Jeudi 06 août 2026. Lieu : Hôtel de Ville de Yaoundé à 10h.",
-      "Mariage religieux : Vendredi 07 août 2026. Lieu : Cathédrale Notre-Dame-des-Victoires à 15h.",
-      "Mariage traditionnel : Samedi 08 août 2026. Lieu : Nkongoa à 10h.",
     ],
   },
   {
