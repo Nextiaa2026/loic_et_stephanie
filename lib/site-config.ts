@@ -27,10 +27,9 @@ export const WEDDING_DATES = {
 export const WEDDING_LOCATIONS = {
   traditional: "Nkongoa - Boulangerie du peuple - Route de Mfou",
   traditionalMapsQuery: "Mfou+La+Boulangerie+du+Peuple",
-  religious: "Cathédrale Notre dame des victoires, Yaoundé",
-  religiousMapsQuery:
-    "Cathedrale+Notre+dame+des+victoires+Poste+centrale+Yaounde",
-  civil: "Hôtel de ville de Yaoundé ",
+  religious: "Cathédrale Notre-Dame des Victoires, Yaoundé",
+  religiousMapsQuery: "Cathedrale+Notre+Dame+des+Victoires+Yaounde",
+  civil: "Hôtel de Ville de Yaoundé ",
   civilMapsQuery: "Hôtel+de+ville+de+Yaoundé",
 } as const;
 
