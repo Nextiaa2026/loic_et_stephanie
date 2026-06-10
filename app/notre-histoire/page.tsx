@@ -62,7 +62,7 @@ const timelineEvents: TimelineEvent[] = [
     ],
   },
   {
-    date: "Février 2023",
+    date: "Février 2025",
     title: "L'officialisation",
     paragraphs: [
       "Un mois après leur première rencontre, quelque chose avait déjà changé entre eux.",
@@ -153,7 +153,7 @@ export default function NotreHistoirePage() {
           <article className="mx-auto max-w-4xl px-2 pb-16 pt-4 sm:px-0">
             <div className="relative space-y-8 sm:space-y-10">
               <div className="absolute top-0 bottom-0 left-4 hidden w-px bg-border sm:block" />
-              {timelineEvents.map(event => (
+              {timelineEvents.map((event) => (
                 <section
                   key={event.title}
                   className="relative grid gap-3 sm:grid-cols-[120px_1fr] sm:gap-6"
@@ -171,7 +171,7 @@ export default function NotreHistoirePage() {
                       {event.title}
                     </h2>
                     <div className="space-y-4 text-base leading-[1.8] text-muted-foreground italic sm:text-[17px]">
-                      {event.paragraphs.map(paragraph => (
+                      {event.paragraphs.map((paragraph) => (
                         <p key={paragraph}>{paragraph}</p>
                       ))}
                     </div>
