@@ -5,12 +5,7 @@ import { PageContainer } from "@/components/home/page-container";
 import { PageHeroVertical } from "@/components/home/page-hero-vertical";
 import { SiteHeader } from "@/components/home/site-header";
 import { SiteFooter } from "@/components/home/site-footer";
-import {
-  Card,
-  CardContent,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   SITE_CONTACT_EMAIL,
   WEDDING_DATES,
@@ -33,9 +28,19 @@ const infoSections: {
     icon: Plane,
     title: "Accès & Transport",
     items: [
-      "L'aéroport international de Yaoundé-Nsimalen est le point d'arrivée pour les invités venant de l'étranger.",
-      "Des navettes pourront être organisées depuis Yaoundé vers Mfou pour le mariage traditionnel — détails à confirmer.",
-      "Pour le mariage religieux, la Cathédrale Poste Central est accessible depuis le centre-ville de Yaoundé.",
+      "🏛️ Le Mariage Civil",
+      "Lieu : Hôtel de Ville de Yaoundé",
+      "Comment s'y rendre : Le site est très facilement accessible. Vous pouvez y accéder en taxi traditionnel ou via l'application Yango en entrant directement Hôtel de Ville de Yaoundé comme destination.",
+
+      "🛎️ Le Mariage Religieux",
+      "Lieu : Cathédrale Notre-Dame-des-Victoires (Centre-ville)",
+      "Comment s'y rendre : Située en plein cœur de la ville, la cathédrale est accessible par tous les transports en commun (taxis, etc.) ou via Yango.",
+      "Parking : Un espace de stationnement est prévu pour vous garer en toute sécurité directement dans le parking de l'église.",
+
+      "🥁 Le Mariage Traditionnel",
+      "Lieu : Nkongoa",
+      "Repère pour s'y rendre : Le lieu se situe sur la route de Mfou, juste à côté de la Boulangerie du Peuple.",
+      "Conseil : Si vous prenez un taxi ou un chauffeur, n'hésitez pas à lui donner ce repère très connu dans la zone !",
     ],
   },
   {
@@ -49,11 +54,11 @@ const infoSections: {
   },
   {
     icon: Car,
-    title: "Stationnement",
+    title: "Stationnement & Parkings",
     items: [
-      "Un parking est disponible sur place selon les lieux — précisions communiquées avant l’événement.",
-      "Des agents de sécurité seront présents pour guider les véhicules.",
-      "Covoiturage encouragé — un groupe WhatsApp dédié sera créé.",
+      "Hôtel de Ville (Mariage Civil) : Quelques places disponibles aux alentours. Le centre-ville étant très animé, prévoyez une petite marge d'avance si vous venez véhiculés.",
+      "Cathédrale Notre-Dame-des-Victoires (Mariage Religieux) : Un espace sécurisé est prévu pour vous à l'intérieur du parking de l'église.",
+      "Nkongoa (Mariage Traditionnel) : Un espace sera aménagé sur place pour vous permettre de garer vos véhicules à proximité de la cérémonie.",
     ],
   },
   {
@@ -62,16 +67,6 @@ const infoSections: {
     items: [
       `Mariage traditionnel : ${WEDDING_DATES.traditional.label} — ${WEDDING_LOCATIONS.traditional}.`,
       `Mariage religieux : ${WEDDING_DATES.religious.label} — ${WEDDING_LOCATIONS.religious}.`,
-      "Des cartes et itinéraires détaillés seront envoyés par email avant l’événement.",
-    ],
-  },
-  {
-    icon: Landmark,
-    title: "Mariage civil",
-    items: [
-      "Le mariage civil officialise notre union devant l’autorité de l’état civil : c’est l’acte légal qui nous reconnaît comme époux et épouse.",
-      `Date : ${WEDDING_DATES.civil.label}. Lieu : ${WEDDING_LOCATIONS.civil}.`,
-      "L’horaire précis vous sera communiqué en temps utile. Pensez à vous munir d’une pièce d’identité valide, comme pour toute cérémonie civile.",
     ],
   },
   {
