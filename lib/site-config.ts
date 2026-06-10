@@ -25,12 +25,12 @@ export const WEDDING_DATES = {
 } as const;
 
 export const WEDDING_LOCATIONS = {
-  traditional: "Mfou — La Boulangerie du Peuple",
+  traditional: "Nkongoa - Boulangerie du peuple - Route de Mfou",
   traditionalMapsQuery: "Mfou+La+Boulangerie+du+Peuple",
   religious: "Cathédrale Notre dame des victoires, Yaoundé",
   religiousMapsQuery:
     "Cathedrale+Notre+dame+des+victoires+Poste+centrale+Yaounde",
-  civil: "Nkongoa - Boulangerie du peuple - Route de Mfou",
+  civil: "Hôtel de ville de Yaoundé ",
   civilMapsQuery: "Hôtel+de+ville+de+Yaoundé",
 } as const;
 
