@@ -6,6 +6,7 @@ import { SiteFooter } from "@/components/home/site-footer";
 import { CivilEvent } from "@/components/home/civil-event";
 import { EventReligious } from "@/components/home/event-religious";
 import { EventHighlight } from "@/components/home/event-highlight";
+import { TraditionalProgramTimeline } from "@/components/home/traditional-program-timeline";
 
 const playfair = Cormorant_Garamond({
   subsets: ["latin"],
@@ -31,6 +32,8 @@ export default function LesDatesPage() {
           <EventReligious serifClassName={playfair.className} />
 
           <EventHighlight serifClassName={playfair.className} />
+
+          <TraditionalProgramTimeline serifClassName={playfair.className} />
 
           {/* Events */}
         </main>

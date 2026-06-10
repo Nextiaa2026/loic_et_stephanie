@@ -12,7 +12,6 @@ import { SiteFooter } from "./site-footer";
 import { SiteHeader } from "./site-header";
 import { StoryWithMedia } from "./story-with-media";
 import { TestimonialsSection } from "./testimonials-section";
-import { TraditionalProgramTimeline } from "./traditional-program-timeline";
 import { WelcomeSplit } from "./welcome-split";
 
 type HomeViewProps = {
@@ -36,7 +35,6 @@ export function HomeView({ serifClassName }: HomeViewProps) {
           <PracticalInfo serifClassName={serifClassName} />
           <TestimonialsSection serifClassName={serifClassName} />
           <InviteHero serifClassName={serifClassName} />
-          <TraditionalProgramTimeline serifClassName={serifClassName} />
         </main>
         <SiteFooter />
       </PageContainer>
