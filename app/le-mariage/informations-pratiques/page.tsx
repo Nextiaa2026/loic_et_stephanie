@@ -26,7 +26,7 @@ const infoSections: {
 }[] = [
   {
     icon: Plane,
-    title: "Accès & Transport",
+    title: "Hebergement & Accès",
     items: [
       "🏛️ Le Mariage Civil",
       "Lieu : Hôtel de Ville de Yaoundé",
@@ -44,15 +44,6 @@ const infoSections: {
     ],
   },
   {
-    icon: Hotel,
-    title: "Hébergement",
-    items: [
-      "Hôtel Hilton Yaoundé — Tarifs négociés pour les invités (mentionnez « SL2026 » ou « assoke2026 »).",
-      "Hôtel La Falaise — Option intermédiaire, à 10 min de l'église.",
-      "Résidences familiales disponibles pour certains invités — merci de nous contacter.",
-    ],
-  },
-  {
     icon: Car,
     title: "Stationnement & Parkings",
     items: [
@@ -67,6 +58,9 @@ const infoSections: {
     items: [
       `Mariage traditionnel : ${WEDDING_DATES.traditional.label} — ${WEDDING_LOCATIONS.traditional}.`,
       `Mariage religieux : ${WEDDING_DATES.religious.label} — ${WEDDING_LOCATIONS.religious}.`,
+      "Mariage civil :Jeudi 06 août 2026. Lieu : Hôtel de Ville de Yaoundé à 10h.",
+      "Mariage religieux : Vendredi 07 août 2026. Lieu : Cathédrale Notre-Dame-des-Victoires à 15h.",
+      "Mariage traditionnel : Samedi 08 août 2026. Lieu : Nkongoa à 10h.",
     ],
   },
   {

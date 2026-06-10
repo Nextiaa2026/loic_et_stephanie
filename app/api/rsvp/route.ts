@@ -9,7 +9,7 @@ export async function POST(request: Request) {
       console.error("GOOGLE_SHEET_URL is not defined");
       return NextResponse.json(
         { error: "Configuration error" },
-        { status: 500 }
+        { status: 500 },
       );
     }
 
@@ -26,14 +26,14 @@ export async function POST(request: Request) {
       console.error("Google Apps Script error:", errorText);
       return NextResponse.json(
         { error: "Failed to submit to Google Sheets" },
-        { status: 500 }
+        { status: 500 },
       );
     }
   } catch (error) {
     console.error("RSVP API Error:", error);
     return NextResponse.json(
       { error: "Internal Server Error" },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }
