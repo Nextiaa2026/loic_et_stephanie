@@ -24,7 +24,7 @@ export function HeroPortrait({ serifClassName }: HeroPortraitProps) {
       >
         <AspectRatio ratio={4 / 5} className="bg-muted md:aspect-16/7">
           <Image
-            src="/jl_2026_main_hero.jpeg"
+            src="/hero_01.jpeg"
             alt="Stéphanie et Loïc"
             fill
             sizes="100vw"
@@ -44,7 +44,7 @@ export function HeroPortrait({ serifClassName }: HeroPortraitProps) {
             <motion.h1
               className={cn(
                 serifClassName,
-                "mb-3 text-balance text-[1.95rem] leading-[1.06] font-semibold tracking-tight text-white sm:mb-5 sm:text-3xl lg:text-[2.75rem]"
+                "mb-3 text-balance text-[1.95rem] leading-[1.06] font-semibold tracking-tight text-white sm:mb-5 sm:text-3xl lg:text-[2.75rem]",
               )}
               initial={reduce ? false : { opacity: 0, y: 18 }}
               animate={reduce ? undefined : { opacity: 1, y: 0 }}

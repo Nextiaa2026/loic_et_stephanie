@@ -4,11 +4,11 @@ export const SITE_CONTACT_EMAIL = "loicassontia@gmail.com" as const;
 /** Dates officielles des cérémonies (source unique pour tout le site). */
 export const WEDDING_DATES = {
   traditional: {
-    label: "Samedi 1 août 2026",
-    time: "15h00",
-    display: "Samedi 1 août 2026 à 15h00",
-    short: "1 août 2026",
-    countdownIso: "2026-08-01T09:00:00",
+    label: "Mercredi 5 août 2026",
+    time: "15h30",
+    display: "Mercredi 5 août 2026 à 15h30",
+    short: "5 août 2026",
+    countdownIso: "2026-08-05T13:30:00",
   },
   religious: {
     label: "Vendredi 07 août 2026",
@@ -20,13 +20,14 @@ export const WEDDING_DATES = {
     label: "Jeudi 6 août 2026",
     display: "Jeudi 6 août 2026",
     short: "6 août 2026",
+    time: "13h00",
   },
 } as const;
 
 export const WEDDING_LOCATIONS = {
   traditional: "Mfou — La Boulangerie du Peuple",
   traditionalMapsQuery: "Mfou+La+Boulangerie+du+Peuple",
-  religious: "Cathédrale Notre dame des victoires, Poste centrale, Yaoundé",
+  religious: "Cathédrale Notre dame des victoires, Yaoundé",
   religiousMapsQuery:
     "Cathedrale+Notre+dame+des+victoires+Poste+centrale+Yaounde",
   civil: "Hôtel de ville de Yaoundé ",

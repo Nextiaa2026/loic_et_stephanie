@@ -33,7 +33,7 @@ export function EventHighlight({ serifClassName }: EventHighlightProps) {
         <h2
           className={cn(
             serifClassName,
-            "text-2xl font-semibold tracking-tight text-foreground sm:text-3xl"
+            "text-2xl font-semibold tracking-tight text-foreground sm:text-3xl",
           )}
         >
           Mariage Traditionnel
@@ -45,7 +45,7 @@ export function EventHighlight({ serifClassName }: EventHighlightProps) {
             <span>{WEDDING_DATES.traditional.display}</span>
           </p>
           <a
-            href={`https://www.google.com/maps/search/?api=1&query=${WEDDING_LOCATIONS.traditionalMapsQuery}`}
+            href={`https://maps.google.com/?q=3.811900,11.591300`}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 underline decoration-primary/40 underline-offset-4 transition-colors hover:text-foreground"
@@ -53,6 +53,14 @@ export function EventHighlight({ serifClassName }: EventHighlightProps) {
             <MapPin className="size-3.5 shrink-0" aria-hidden />
             <span>{WEDDING_LOCATIONS.traditional}</span>
           </a>
+        </div>
+        <div className="mx-auto mt-6 max-w-xl space-y-1 text-sm leading-relaxed text-muted-foreground sm:text-base">
+          <p>
+            Un rendez-vous avec nos origines, placé sous le signe du respect des
+            coutumes. Ce moment unique réunira nos familles autour de valeurs
+            essentielles, dans une atmosphère de partage, de traditions et
+            d’émotions sincères.
+          </p>
         </div>
       </Reveal>
     </section>

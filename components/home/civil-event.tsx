@@ -37,7 +37,7 @@ export function CivilEvent({ serifClassName }: CivilEventProps) {
         <h2
           className={cn(
             serifClassName,
-            "text-2xl font-semibold tracking-tight text-foreground sm:text-3xl"
+            "text-2xl font-semibold tracking-tight text-foreground sm:text-3xl",
           )}
         >
           Mariage Civil
@@ -60,8 +60,9 @@ export function CivilEvent({ serifClassName }: CivilEventProps) {
         </div>
         <div className="mx-auto mt-6 max-w-xl space-y-1 text-sm leading-relaxed text-muted-foreground sm:text-base">
           <p>
-            L&apos;officialisation de notre union devant la loi. Les détails
-            (horaire précis) vous seront communiqués en temps utile.
+            Devant la loi et entourés de nos proches, nous scellerons
+            officiellement notre union. Une étape essentielle et symbolique,
+            marquant le début de notre histoire commune aux yeux de tous.
           </p>
         </div>
       </Reveal>

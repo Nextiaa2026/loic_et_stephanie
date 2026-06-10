@@ -33,7 +33,7 @@ export function EventReligious({ serifClassName }: EventReligiousProps) {
         <h2
           className={cn(
             serifClassName,
-            "text-2xl font-semibold tracking-tight text-foreground sm:text-3xl"
+            "text-2xl font-semibold tracking-tight text-foreground sm:text-3xl",
           )}
         >
           Mariage Religieux
@@ -45,7 +45,7 @@ export function EventReligious({ serifClassName }: EventReligiousProps) {
             <span>{WEDDING_DATES.religious.display}</span>
           </p>
           <a
-            href={`https://www.google.com/maps/search/?api=1&query=${WEDDING_LOCATIONS.religiousMapsQuery}`}
+            href={`https://maps.app.goo.gl/AuVh2DGKKoR2dzTr6`}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex w-full max-w-136 items-start justify-center gap-2 text-center underline decoration-primary/40 underline-offset-4 transition-colors hover:text-foreground"
