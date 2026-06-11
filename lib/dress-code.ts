@@ -17,8 +17,6 @@ export type DressCodeEvent = {
   inspiration?: DressCodeInspiration;
 };
 
-export const PINTEREST_DRESS_CODE_URL = "https://pin.it/5pjzme7aj";
-
 /** Contenu dress code — libellés tels que fournis par les mariés. */
 export const DRESS_CODE_EVENTS: DressCodeEvent[] = [
   {
@@ -47,7 +45,7 @@ export const DRESS_CODE_EVENTS: DressCodeEvent[] = [
       title: "Besoin d'inspiration?",
       description:
         "Nous avons préparé un moodboard pour vous aider à visualiser l’esprit général du dress code :",
-      url: PINTEREST_DRESS_CODE_URL,
+      url: "https://pin.it/1wAnJsDUJ",
     },
   },
   {
@@ -98,7 +96,7 @@ export const DRESS_CODE_EVENTS: DressCodeEvent[] = [
       title: "💡 Besoin d’inspiration ?",
       description:
         "Découvrez l’esprit visuel de la soirée à travers notre moodboard :",
-      url: PINTEREST_DRESS_CODE_URL,
+      url: "https://pin.it/DghEtgl5Q",
     },
   },
 ];
