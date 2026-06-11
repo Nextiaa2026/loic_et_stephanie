@@ -20,7 +20,7 @@ export type DressCodeEvent = {
 /** Contenu dress code — libellés tels que fournis par les mariés. */
 export const DRESS_CODE_EVENTS: DressCodeEvent[] = [
   {
-    eventLabel: "",
+    eventLabel: "DRESS CODE – MARIAGE TRADITIONNEL",
     ambiance: "✨ Splendeur Royale & Traditionnelle",
     intro:
       "Pour notre mariage traditionnel, nous souhaitons célébrer nos cultures dans un esprit raffiné et chaleureux. Cette journée sera l’occasion de mettre à l’honneur la beauté de nos traditions, tout en apportant une touche de modernité et d’élégance. Nous vous invitons donc à privilégier une tenue traditionnelle revisitée avec finesse",
